@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { features } from '../config';
+---
+
+<BaseLayout title="Home" description="Bruno Camarneiro - Software Engineer. Curious mind, crafted code.">
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center">
+    <div class="container-wide py-32">
+      <div class="max-w-5xl space-y-12">
+        <!-- Large Name Display -->
+        <div class="space-y-6">
+          <h1 class="text-6xl md:text-8xl lg:text-9xl font-light leading-none tracking-tighter">
+            Bruno<br/>Camarneiro
+          </h1>
+          <div class="flex items-center gap-6">
+            <img
+              src="/logo.png"
+              alt="The Platypus Engineer"
+              class="w-16 h-16 md:w-20 md:h-20 object-contain opacity-80"
+            />
+            <p class="text-2xl md:text-3xl text-graphite font-light">
+              Software Engineer
+            </p>
+          </div>
+        </div>
+
+        <!-- Tagline -->
+        <div class="pt-8 border-t border-ink/10 max-w-3xl">
+          <p class="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-relaxed text-graphite/90">
+            Curious mind,<br/>crafted code.
+          </p>
+        </div>
+
+        <!-- Description -->
+        <div class="max-w-2xl pt-8">
+          <p class="text-xl md:text-2xl text-graphite/80 leading-relaxed font-light">
+            Building elegant solutions to complex problems.
+            Focused on clean architecture and thoughtful design.
+          </p>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex flex-wrap gap-6 pt-12">
+          <a
+            href="/cv"
+            class="group inline-flex items-center gap-3 text-xl font-light text-ink no-underline hover:text-copper transition-colors"
+          >
+            View CV
+            <span class="group-hover:translate-x-2 transition-transform text-2xl">→</span>
+          </a>
+          {features.portfolio && (
+            <a
+              href="/portfolio"
+              class="group inline-flex items-center gap-3 text-xl font-light text-graphite no-underline hover:text-copper transition-colors"
+            >
+              See Work
+              <span class="group-hover:translate-x-2 transition-transform text-2xl">→</span>
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Do Section -->
+  <section class="py-32 md:py-48 border-t border-ink/10">
+    <div class="container-wide">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-light mb-24">What I Do</h2>
+
+        <div class="space-y-24">
+          <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+            <span class="text-6xl text-copper/30 font-mono">01</span>
+            <div class="space-y-4">
+              <h3 class="text-2xl md:text-3xl font-light">Development</h3>
+              <p class="text-xl text-graphite/80 leading-relaxed font-light max-w-2xl">
+                Clean, maintainable code that scales.
+                From architecture to implementation, I focus on solutions that last and teams can understand.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+            <span class="text-6xl text-copper/30 font-mono">02</span>
+            <div class="space-y-4">
+              <h3 class="text-2xl md:text-3xl font-light">Architecture</h3>
+              <p class="text-xl text-graphite/80 leading-relaxed font-light max-w-2xl">
+                Thoughtful system design for robust solutions.
+                Building foundations that enable teams to move fast without breaking things.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+            <span class="text-6xl text-copper/30 font-mono">03</span>
+            <div class="space-y-4">
+              <h3 class="text-2xl md:text-3xl font-light">Writing</h3>
+              <p class="text-xl text-graphite/80 leading-relaxed font-light max-w-2xl">
+                Sharing knowledge through clear documentation.
+                Making complex concepts accessible to everyone on the team.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {features.blog && (
+    <section class="py-32 md:py-48 border-t border-ink/10">
+      <div class="container-wide">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-end justify-between mb-16">
+            <h2 class="text-4xl md:text-5xl font-light">Recent Writing</h2>
+            <a href="/blog" class="text-xl text-graphite hover:text-copper font-light no-underline group">
+              View all
+              <span class="inline-block group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+
+          <div class="space-y-12">
+            <article class="group border-b border-ink/5 pb-12">
+              <a href="/blog" class="block no-underline">
+                <time class="text-sm text-graphite/40 font-mono mb-4 block">2024-01-01</time>
+                <h3 class="text-2xl md:text-3xl font-light mb-3 group-hover:text-copper transition-colors">
+                  Coming soon
+                </h3>
+                <p class="text-lg text-graphite/70 font-light">New content arriving shortly...</p>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>
