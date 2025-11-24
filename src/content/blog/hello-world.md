@@ -1,11 +1,20 @@
 ---
 title: "Hello World"
 description: "Welcome to my blog. A place for thoughts, code, and curiosity."
-date: 2024-01-01
+publishedAt: 2024-01-01
 tags: ["introduction", "personal"]
+draft: false
+canonicalUrl: "https://camarneiro.com/blog/hello-world"
+# Uncomment and fill after cross-posting
+# crosspost:
+#   devTo:
+#     published: false
+#     id:
+#     url:
+#   medium:
+#     published: false
+#     url:
 ---
-
-# Welcome
 
 This is my first blog post. More content coming soon!
 
