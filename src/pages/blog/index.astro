@@ -2,9 +2,16 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
-const posts = await getCollection('blog');
+// Filter out drafts and future posts
+const posts = await getCollection('blog', ({ data }) => {
+  const now = new Date();
+  const publishDate = new Date(data.publishedAt);
+  return !data.draft && publishDate <= now;
+});
+
+// Sort by publish date, newest first
 const sortedPosts = posts.sort((a, b) =>
-  new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime()
 );
 ---
 
@@ -23,7 +30,7 @@ const sortedPosts = posts.sort((a, b) =>
         {sortedPosts.map(post => (
           <article class="group">
             <a href={`/blog/${post.slug}`} class="block">
-              <time class="text-sm text-graphite">{new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+              <time class="text-sm text-graphite">{new Date(post.data.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
               <h2 class="text-xl font-serif mt-1 group-hover:text-copper transition-colors">
                 {post.data.title}
               </h2>

@@ -131,6 +131,57 @@ Your site automatically generates an RSS feed at:
 
 This feed can be used with automation tools like Zapier or IFTTT if you want to automate Medium imports in the future.
 
+## Scheduling Posts
+
+Astro doesn't have built-in scheduling, but your blog now supports scheduled posts through date filtering:
+
+### How It Works
+
+Posts are automatically hidden until their `publishedAt` date arrives:
+
+```yaml
+---
+title: "Future Post"
+publishedAt: 2025-12-25  # Won't show until this date
+draft: false
+---
+```
+
+**Important**: Your site must rebuild for scheduled posts to appear.
+
+### Automatic Publishing with GitHub Actions
+
+A scheduled workflow runs **every 6 hours** to check for posts ready to publish:
+
+- Location: [.github/workflows/scheduled-build.yml](.github/workflows/scheduled-build.yml)
+- Schedule: Every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
+- Manual trigger: Available in GitHub Actions tab
+
+**Adjust the schedule** by editing the cron expression:
+```yaml
+schedule:
+  - cron: '0 */6 * * *'  # Every 6 hours
+  # - cron: '0 9 * * *'  # Daily at 9 AM UTC
+  # - cron: '0 */2 * * *'  # Every 2 hours
+```
+
+### Manual Publish
+
+To immediately publish a scheduled post:
+1. Go to GitHub Actions tab
+2. Select "Scheduled Build" workflow
+3. Click "Run workflow"
+
+### Testing Scheduled Posts
+
+```bash
+# In local dev, scheduled posts ARE visible
+npm run dev
+
+# In production build, they're filtered by date
+npm run build
+```
+
 ## Tips & Best Practices
 
 ### Content Considerations
