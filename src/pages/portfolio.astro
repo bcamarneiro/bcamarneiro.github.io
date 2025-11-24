@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    title: "Project One",
+    description: "A comprehensive platform built to solve complex data processing challenges. Implemented scalable architecture handling millions of requests daily with focus on reliability and performance.",
+    tags: ["TypeScript", "React", "Node.js", "PostgreSQL"],
+    link: "#",
+    github: "#"
+  },
+  {
+    title: "Project Two",
+    description: "Real-time collaboration tool enabling teams to work seamlessly across time zones. Built with performance and user experience as primary goals, resulting in 40% faster load times.",
+    tags: ["Python", "FastAPI", "WebSocket", "Redis"],
+    link: "#",
+    github: "#"
+  },
+  {
+    title: "Project Three",
+    description: "Open source contribution to improve developer tooling. Implemented key features that reduced build times significantly and improved developer experience across the ecosystem.",
+    tags: ["Go", "Docker", "Kubernetes", "CI/CD"],
+    link: "#",
+    github: "#"
+  }
+];
+---
+
+<BaseLayout title="Portfolio" description="Bruno Camarneiro's project portfolio and work samples.">
+  <section class="py-32 md:py-48">
+    <div class="container-wide">
+      <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <div class="mb-32">
+          <h1 class="text-5xl md:text-7xl font-light mb-8 tracking-tight">Selected Work</h1>
+          <p class="text-2xl md:text-3xl text-graphite/80 font-light leading-relaxed max-w-3xl">
+            A collection of projects showcasing different aspects of software development—from architecture to implementation.
+          </p>
+        </div>
+
+        <!-- Projects -->
+        <div class="space-y-32">
+          {projects.map((project, index) => (
+            <article class="group">
+              <div class="grid md:grid-cols-[120px_1fr] gap-12 items-start">
+                <span class="text-5xl text-copper/20 font-mono font-light">
+                  0{index + 1}
+                </span>
+                
+                <div class="space-y-8">
+                  <h2 class="text-3xl md:text-4xl font-light group-hover:text-copper transition-colors">
+                    {project.title}
+                  </h2>
+                  
+                  <p class="text-xl text-graphite/80 leading-relaxed font-light max-w-3xl">
+                    {project.description}
+                  </p>
+
+                  <div class="flex flex-wrap gap-3">
+                    {project.tags.map(tag => (
+                      <span class="text-sm font-light text-graphite/60 px-3 py-1.5 border border-ink/10 font-mono">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div class="flex gap-8 pt-4">
+                    <a 
+                      href={project.link} 
+                      class="group/link text-lg font-light text-graphite hover:text-copper no-underline inline-flex items-center gap-2 transition-colors"
+                    >
+                      View Project
+                      <span class="group-hover/link:translate-x-2 transition-transform text-xl">→</span>
+                    </a>
+                    <a 
+                      href={project.github} 
+                      class="text-lg font-light text-graphite/60 hover:text-copper no-underline transition-colors"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {index < projects.length - 1 && (
+                <div class="mt-32 border-t border-ink/5"></div>
+              )}
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

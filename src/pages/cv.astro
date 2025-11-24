@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="CV" description="Bruno Camarneiro's professional experience and skills.">
+  <section class="py-32 md:py-48">
+    <div class="container-wide">
+      <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <div class="mb-32">
+          <h1 class="text-5xl md:text-7xl font-light mb-8 tracking-tight">Curriculum Vitae</h1>
+          <p class="text-2xl md:text-3xl text-graphite/80 font-light leading-relaxed max-w-3xl">
+            Software Engineer focused on building scalable, maintainable systems
+            that teams love to work with.
+          </p>
+        </div>
+
+        <div class="space-y-32">
+          <!-- About -->
+          <div class="grid md:grid-cols-[200px_1fr] gap-12">
+            <h2 class="text-2xl font-light text-graphite">About</h2>
+            <div>
+              <p class="text-xl text-graphite/80 leading-relaxed font-light">
+                Passionate software engineer with expertise in full-stack development and system architecture.
+                I believe in writing code that is not only functional but also maintainable and beautiful.
+              </p>
+              <p class="text-xl text-graphite/80 leading-relaxed font-light mt-6">
+                My approach combines technical excellence with pragmatic problem-solving,
+                always keeping the end user and team productivity in mind.
+              </p>
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div class="grid md:grid-cols-[200px_1fr] gap-12">
+            <h2 class="text-2xl font-light text-graphite">Experience</h2>
+            <div class="space-y-16">
+              <div>
+                <p class="text-sm font-mono text-graphite/40 mb-4">2022 — Present</p>
+                <h3 class="text-2xl font-light mb-2">Senior Software Engineer</h3>
+                <p class="text-copper text-lg mb-6">Company Name</p>
+                <p class="text-lg text-graphite/80 leading-relaxed font-light">
+                  Led development of key features and mentored junior developers.
+                  Improved system architecture and introduced best practices across the team.
+                  Focused on scalability, performance, and code quality.
+                </p>
+              </div>
+
+              <div>
+                <p class="text-sm font-mono text-graphite/40 mb-4">2019 — 2022</p>
+                <h3 class="text-2xl font-light mb-2">Software Engineer</h3>
+                <p class="text-copper text-lg mb-6">Previous Company</p>
+                <p class="text-lg text-graphite/80 leading-relaxed font-light">
+                  Built full-stack applications using modern technologies.
+                  Contributed to open-source projects and participated in technical community.
+                  Collaborated with cross-functional teams to deliver features.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="grid md:grid-cols-[200px_1fr] gap-12">
+            <h2 class="text-2xl font-light text-graphite">Skills</h2>
+            <div class="space-y-12">
+              <div>
+                <h3 class="text-lg text-graphite/60 mb-6 font-light">Languages</h3>
+                <div class="flex flex-wrap gap-4">
+                  {['TypeScript', 'Python', 'Go', 'Rust', 'JavaScript'].map(skill => (
+                    <span class="text-base font-light text-graphite/80 px-4 py-2 border border-ink/10 hover:border-copper/30 transition-colors">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-lg text-graphite/60 mb-6 font-light">Frameworks & Tools</h3>
+                <div class="flex flex-wrap gap-4">
+                  {['React', 'Node.js', 'Next.js', 'Astro', 'Docker', 'Kubernetes'].map(skill => (
+                    <span class="text-base font-light text-graphite/80 px-4 py-2 border border-ink/10 hover:border-copper/30 transition-colors">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-lg text-graphite/60 mb-6 font-light">Databases</h3>
+                <div class="flex flex-wrap gap-4">
+                  {['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'].map(skill => (
+                    <span class="text-base font-light text-graphite/80 px-4 py-2 border border-ink/10 hover:border-copper/30 transition-colors">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-lg text-graphite/60 mb-6 font-light">Focus Areas</h3>
+                <div class="flex flex-wrap gap-4">
+                  {['System Design', 'API Development', 'DevOps', 'Technical Writing'].map(skill => (
+                    <span class="text-base font-light text-graphite/80 px-4 py-2 border border-ink/10 hover:border-copper/30 transition-colors">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="grid md:grid-cols-[200px_1fr] gap-12">
+            <h2 class="text-2xl font-light text-graphite">Education</h2>
+            <div>
+              <p class="text-sm font-mono text-graphite/40 mb-4">2015 — 2019</p>
+              <h3 class="text-2xl font-light mb-2">Bachelor's in Computer Science</h3>
+              <p class="text-copper text-lg">University Name</p>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="grid md:grid-cols-[200px_1fr] gap-12">
+            <h2 class="text-2xl font-light text-graphite">Contact</h2>
+            <div class="space-y-6">
+              <a href="https://github.com/bcamarneiro" class="group flex items-center gap-3 text-xl font-light text-graphite hover:text-copper no-underline transition-colors">
+                GitHub
+                <span class="group-hover:translate-x-2 transition-transform">→</span>
+              </a>
+              <a href="https://linkedin.com/in/bcamarneiro" class="group flex items-center gap-3 text-xl font-light text-graphite hover:text-copper no-underline transition-colors">
+                LinkedIn
+                <span class="group-hover:translate-x-2 transition-transform">→</span>
+              </a>
+              <a href="mailto:hello@camarneiro.com" class="group flex items-center gap-3 text-xl font-light text-graphite hover:text-copper no-underline transition-colors">
+                Email
+                <span class="group-hover:translate-x-2 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
