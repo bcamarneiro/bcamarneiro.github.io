@@ -17,18 +17,18 @@ const { title, description = "Bruno Camarneiro - Software Engineer" } = Astro.pr
     <meta name="description" content={description} />
 
     <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
 
     <title>{title} | Bruno Camarneiro</title>
   </head>
   <body class="min-h-screen flex flex-col">
     <header class="sticky top-0 z-50 bg-beige/95 backdrop-blur-sm border-b border-ink/10">
       <nav class="container-wide py-6 flex items-center justify-between">
-        <a href="/" class="flex items-center gap-3 text-ink hover:text-ink no-underline group">
-          <img src="/logo.png" alt="Logo" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
+        <a href="/" class="text-ink hover:text-ink no-underline group">
           <span class="font-serif text-lg font-semibold tracking-tight">Bruno Camarneiro</span>
         </a>
         <ul class="flex items-center gap-8 text-base">
@@ -47,12 +47,9 @@ const { title, description = "Bruno Camarneiro - Software Engineer" } = Astro.pr
     <footer class="border-t border-ink/10 py-16 mt-auto">
       <div class="container-wide">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-          <div class="flex items-center gap-3">
-            <img src="/logo.png" alt="Logo" class="w-10 h-10 object-contain opacity-50" />
-            <div>
-              <p class="font-serif font-semibold">Bruno Camarneiro</p>
-              <p class="text-sm text-graphite">Curious mind, crafted code.</p>
-            </div>
+          <div>
+            <p class="font-serif font-semibold">Bruno Camarneiro</p>
+            <p class="text-sm text-graphite">Curious mind, crafted code.</p>
           </div>
           <div class="text-sm text-graphite">
             <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
