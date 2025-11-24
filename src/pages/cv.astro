@@ -1,144 +1,349 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import cvData from '../data/cv.json';
+import type { CVData } from '../types/cv';
+
+const cv = cvData as CVData;
+
+// Helper function to format dates
+function formatDate(dateString: string | null): string {
+  if (!dateString) return 'Present';
+  const [year, month] = dateString.split('-');
+  const date = new Date(parseInt(year), month ? parseInt(month) - 1 : 0);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: month ? 'short' : undefined
+  });
+}
+
+// Helper function to calculate duration
+function calculateDuration(start: string, end: string | null): string {
+  const startDate = new Date(start);
+  const endDate = end ? new Date(end) : new Date();
+
+  const months = (endDate.getFullYear() - startDate.getFullYear()) * 12 +
+                 (endDate.getMonth() - startDate.getMonth());
+
+  const years = Math.floor(months / 12);
+  const remainingMonths = months % 12;
+
+  if (years === 0) return `${remainingMonths} ${remainingMonths === 1 ? 'month' : 'months'}`;
+  if (remainingMonths === 0) return `${years} ${years === 1 ? 'year' : 'years'}`;
+  return `${years} ${years === 1 ? 'year' : 'years'}, ${remainingMonths} ${remainingMonths === 1 ? 'month' : 'months'}`;
+}
 ---
 
-<BaseLayout title="CV" description="Bruno Camarneiro's professional experience and skills.">
-  <section class="py-32 md:py-48">
-    <div class="container-wide">
-      <div class="max-w-5xl mx-auto">
-        <!-- Header -->
-        <div class="mb-32">
-          <h1 class="text-5xl md:text-7xl font-light mb-8 tracking-tight">Curriculum Vitae</h1>
-          <p class="text-2xl md:text-3xl text-graphite/80 font-light leading-relaxed max-w-3xl">
-            Software Engineer focused on building scalable, maintainable systems
-            that teams love to work with.
-          </p>
+<BaseLayout
+  title="CV"
+  description={`${cv.personal.name} - ${cv.personal.title}. ${cv.summary}`}
+>
+  <div class="container-narrow py-16">
+    <!-- Header -->
+    <header class="mb-16 pb-8 border-b border-ink/10">
+      <h1 class="text-4xl md:text-5xl font-light mb-4">{cv.personal.name}</h1>
+      <p class="text-xl md:text-2xl text-copper mb-6">{cv.personal.title}</p>
+
+      <div class="flex flex-wrap gap-4 text-graphite">
+        {cv.personal.location && (
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>{cv.personal.location}</span>
+          </div>
+        )}
+
+        <a href={`mailto:${cv.personal.email}`} class="flex items-center gap-2 no-underline hover:text-copper transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          <span>{cv.personal.email}</span>
+        </a>
+
+        {cv.personal.website && (
+          <a href={cv.personal.website} class="flex items-center gap-2 no-underline hover:text-copper transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+            </svg>
+            <span>Website</span>
+          </a>
+        )}
+
+        {cv.personal.linkedin && (
+          <a href={cv.personal.linkedin} class="flex items-center gap-2 no-underline hover:text-copper transition-colors" target="_blank" rel="noopener">
+            <span>LinkedIn</span>
+          </a>
+        )}
+
+        {cv.personal.github && (
+          <a href={cv.personal.github} class="flex items-center gap-2 no-underline hover:text-copper transition-colors" target="_blank" rel="noopener">
+            <span>GitHub</span>
+          </a>
+        )}
+      </div>
+    </header>
+
+    <!-- Summary -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-light mb-6 pb-2 border-b border-ink/10">Professional Summary</h2>
+      <p class="text-lg text-graphite leading-relaxed">{cv.summary}</p>
+    </section>
+
+    <!-- Key Achievements -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-light mb-6 pb-2 border-b border-ink/10">Key Achievements</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-beige/50 border border-ink/10 rounded-lg p-6">
+          <h3 class="text-lg font-medium text-copper mb-2">Technical Leadership</h3>
+          <p class="text-graphite">Led engineering teams up to 5 developers, architecting micro-frontend systems and establishing testing practices that reduced production bugs by 45%</p>
         </div>
-
-        <div class="space-y-32">
-          <!-- About -->
-          <div class="grid md:grid-cols-[200px_1fr] gap-12">
-            <h2 class="text-2xl font-light text-graphite">About</h2>
-            <div>
-              <p class="text-xl text-graphite/80 leading-relaxed font-light">
-                Passionate software engineer with expertise in full-stack development and system architecture.
-                I believe in writing code that is not only functional but also maintainable and beautiful.
-              </p>
-              <p class="text-xl text-graphite/80 leading-relaxed font-light mt-6">
-                My approach combines technical excellence with pragmatic problem-solving,
-                always keeping the end user and team productivity in mind.
-              </p>
-            </div>
-          </div>
-
-          <!-- Experience -->
-          <div class="grid md:grid-cols-[200px_1fr] gap-12">
-            <h2 class="text-2xl font-light text-graphite">Experience</h2>
-            <div class="space-y-16">
-              <div>
-                <p class="text-sm font-mono text-graphite/40 mb-4">2022 — Present</p>
-                <h3 class="text-2xl font-light mb-2">Senior Software Engineer</h3>
-                <p class="text-copper text-lg mb-6">Company Name</p>
-                <p class="text-lg text-graphite/80 leading-relaxed font-light">
-                  Led development of key features and mentored junior developers.
-                  Improved system architecture and introduced best practices across the team.
-                  Focused on scalability, performance, and code quality.
-                </p>
-              </div>
-
-              <div>
-                <p class="text-sm font-mono text-graphite/40 mb-4">2019 — 2022</p>
-                <h3 class="text-2xl font-light mb-2">Software Engineer</h3>
-                <p class="text-copper text-lg mb-6">Previous Company</p>
-                <p class="text-lg text-graphite/80 leading-relaxed font-light">
-                  Built full-stack applications using modern technologies.
-                  Contributed to open-source projects and participated in technical community.
-                  Collaborated with cross-functional teams to deliver features.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Skills -->
-          <div class="grid md:grid-cols-[200px_1fr] gap-12">
-            <h2 class="text-2xl font-light text-graphite">Skills</h2>
-            <div class="space-y-12">
-              <div>
-                <h3 class="text-lg text-graphite/60 mb-6 font-light">Languages</h3>
-                <div class="flex flex-wrap gap-4">
-                  {['TypeScript', 'Python', 'Go', 'Rust', 'JavaScript'].map(skill => (
-                    <span class="text-base font-light text-graphite/80 px-4 py-2 border border-ink/10 hover:border-copper/30 transition-colors">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 class="text-lg text-graphite/60 mb-6 font-light">Frameworks & Tools</h3>
-                <div class="flex flex-wrap gap-4">
-                  {['React', 'Node.js', 'Next.js', 'Astro', 'Docker', 'Kubernetes'].map(skill => (
-                    <span class="text-base font-light text-graphite/80 px-4 py-2 border border-ink/10 hover:border-copper/30 transition-colors">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 class="text-lg text-graphite/60 mb-6 font-light">Databases</h3>
-                <div class="flex flex-wrap gap-4">
-                  {['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'].map(skill => (
-                    <span class="text-base font-light text-graphite/80 px-4 py-2 border border-ink/10 hover:border-copper/30 transition-colors">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 class="text-lg text-graphite/60 mb-6 font-light">Focus Areas</h3>
-                <div class="flex flex-wrap gap-4">
-                  {['System Design', 'API Development', 'DevOps', 'Technical Writing'].map(skill => (
-                    <span class="text-base font-light text-graphite/80 px-4 py-2 border border-ink/10 hover:border-copper/30 transition-colors">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Education -->
-          <div class="grid md:grid-cols-[200px_1fr] gap-12">
-            <h2 class="text-2xl font-light text-graphite">Education</h2>
-            <div>
-              <p class="text-sm font-mono text-graphite/40 mb-4">2015 — 2019</p>
-              <h3 class="text-2xl font-light mb-2">Bachelor's in Computer Science</h3>
-              <p class="text-copper text-lg">University Name</p>
-            </div>
-          </div>
-
-          <!-- Contact -->
-          <div class="grid md:grid-cols-[200px_1fr] gap-12">
-            <h2 class="text-2xl font-light text-graphite">Contact</h2>
-            <div class="space-y-6">
-              <a href="https://github.com/bcamarneiro" class="group flex items-center gap-3 text-xl font-light text-graphite hover:text-copper no-underline transition-colors">
-                GitHub
-                <span class="group-hover:translate-x-2 transition-transform">→</span>
-              </a>
-              <a href="https://linkedin.com/in/bcamarneiro" class="group flex items-center gap-3 text-xl font-light text-graphite hover:text-copper no-underline transition-colors">
-                LinkedIn
-                <span class="group-hover:translate-x-2 transition-transform">→</span>
-              </a>
-              <a href="mailto:hello@camarneiro.com" class="group flex items-center gap-3 text-xl font-light text-graphite hover:text-copper no-underline transition-colors">
-                Email
-                <span class="group-hover:translate-x-2 transition-transform">→</span>
-              </a>
-            </div>
-          </div>
+        <div class="bg-beige/50 border border-ink/10 rounded-lg p-6">
+          <h3 class="text-lg font-medium text-copper mb-2">Performance Optimization</h3>
+          <p class="text-graphite">Achieved 95+ Lighthouse scores, reduced LCP by 40%, and optimized bundle sizes by 35% through advanced code-splitting strategies</p>
+        </div>
+        <div class="bg-beige/50 border border-ink/10 rounded-lg p-6">
+          <h3 class="text-lg font-medium text-copper mb-2">Enterprise Delivery</h3>
+          <p class="text-graphite">Delivered solutions for Fortune 500 clients including Vodafone and YOOX Net-a-Porter, handling millions of users and thousands of daily transactions</p>
+        </div>
+        <div class="bg-beige/50 border border-ink/10 rounded-lg p-6">
+          <h3 class="text-lg font-medium text-copper mb-2">Modern Stack Expertise</h3>
+          <p class="text-graphite">Deep expertise in React, TypeScript, Next.js, and emerging technologies including Web3, AI integration, and micro-frontend architectures</p>
         </div>
       </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-light mb-6 pb-2 border-b border-ink/10">Experience</h2>
+      <div class="space-y-12">
+        {cv.experience.map((exp) => (
+          <article>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
+              <div>
+                <h3 class="text-xl font-medium">{exp.title}</h3>
+                <p class="text-copper">{exp.company} · {exp.location}</p>
+              </div>
+              <div class="text-graphite text-sm whitespace-nowrap">
+                <p>{formatDate(exp.startDate)} - {formatDate(exp.endDate)}</p>
+                <p class="text-xs">{calculateDuration(exp.startDate, exp.endDate)}</p>
+              </div>
+            </div>
+
+            <p class="text-graphite mb-4">{exp.description}</p>
+
+            {exp.achievements.length > 0 && (
+              <ul class="list-disc list-inside space-y-2 mb-4 text-graphite">
+                {exp.achievements.map((achievement) => (
+                  <li>{achievement}</li>
+                ))}
+              </ul>
+            )}
+
+            {exp.skills.length > 0 && (
+              <div class="flex flex-wrap gap-2">
+                {exp.skills.map((skill) => (
+                  <span class="px-3 py-1 bg-ink/5 text-sm text-graphite rounded-full">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-light mb-6 pb-2 border-b border-ink/10">Skills</h2>
+      <div class="space-y-6">
+        {cv.skills.technical.map((category) => (
+          <div>
+            <h3 class="text-lg font-medium mb-3 text-copper">{category.category}</h3>
+            <div class="flex flex-wrap gap-2">
+              {category.skills.map((skill) => (
+                <span class="px-3 py-1 bg-ink/5 text-sm text-graphite rounded-full">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        {cv.skills.soft && cv.skills.soft.length > 0 && (
+          <div>
+            <h3 class="text-lg font-medium mb-3 text-copper">Soft Skills</h3>
+            <div class="flex flex-wrap gap-2">
+              {cv.skills.soft.map((skill) => (
+                <span class="px-3 py-1 bg-ink/5 text-sm text-graphite rounded-full">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-light mb-6 pb-2 border-b border-ink/10">Education</h2>
+      <div class="space-y-8">
+        {cv.education.map((edu) => (
+          <article>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
+              <div>
+                <h3 class="text-xl font-medium">{edu.degree}</h3>
+                <p class="text-copper">{edu.institution} · {edu.location}</p>
+              </div>
+              <div class="text-graphite text-sm">
+                <p>{formatDate(edu.startDate)} - {formatDate(edu.endDate)}</p>
+              </div>
+            </div>
+
+            {edu.description && (
+              <p class="text-graphite mb-4">{edu.description}</p>
+            )}
+
+            {edu.achievements && edu.achievements.length > 0 && (
+              <ul class="list-disc list-inside space-y-2 text-graphite">
+                {edu.achievements.map((achievement) => (
+                  <li>{achievement}</li>
+                ))}
+              </ul>
+            )}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Certifications (optional) -->
+    {cv.certifications && cv.certifications.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-2xl font-light mb-6 pb-2 border-b border-ink/10">Certifications</h2>
+        <div class="space-y-6">
+          {cv.certifications.map((cert) => (
+            <article>
+              <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
+                <div>
+                  <h3 class="text-xl font-medium">{cert.name}</h3>
+                  <p class="text-copper">{cert.issuer}</p>
+                </div>
+                <div class="text-graphite text-sm">
+                  <p>{formatDate(cert.date)}</p>
+                </div>
+              </div>
+
+              {cert.credentialId && (
+                <p class="text-sm text-graphite mb-2">Credential ID: {cert.credentialId}</p>
+              )}
+
+              {cert.url && (
+                <a href={cert.url} class="text-copper hover:text-ink transition-colors text-sm" target="_blank" rel="noopener">
+                  View Credential →
+                </a>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Projects (optional) -->
+    {cv.projects && cv.projects.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-2xl font-light mb-6 pb-2 border-b border-ink/10">Projects</h2>
+        <div class="space-y-8">
+          {cv.projects.map((project) => (
+            <article>
+              <div class="flex items-start justify-between gap-4 mb-3">
+                <h3 class="text-xl font-medium">{project.name}</h3>
+                <div class="flex gap-2">
+                  {project.url && (
+                    <a href={project.url} class="text-copper hover:text-ink transition-colors no-underline text-sm" target="_blank" rel="noopener">
+                      Live →
+                    </a>
+                  )}
+                  {project.github && (
+                    <a href={project.github} class="text-copper hover:text-ink transition-colors no-underline text-sm" target="_blank" rel="noopener">
+                      Code →
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              <p class="text-graphite mb-4">{project.description}</p>
+
+              {project.highlights.length > 0 && (
+                <ul class="list-disc list-inside space-y-2 mb-4 text-graphite">
+                  {project.highlights.map((highlight) => (
+                    <li>{highlight}</li>
+                  ))}
+                </ul>
+              )}
+
+              <div class="flex flex-wrap gap-2">
+                {project.technologies.map((tech) => (
+                  <span class="px-3 py-1 bg-ink/5 text-sm text-graphite rounded-full">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Languages (optional) -->
+    {cv.languages && cv.languages.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-2xl font-light mb-6 pb-2 border-b border-ink/10">Languages</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {cv.languages.map((lang) => (
+            <div>
+              <p class="font-medium">{lang.name}</p>
+              <p class="text-sm text-graphite">{lang.proficiency}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Download/Print Button -->
+    <div class="flex justify-center pt-8 border-t border-ink/10">
+      <button
+        onclick="window.print()"
+        class="px-6 py-3 bg-ink text-beige rounded-lg hover:bg-ink/90 transition-colors font-medium"
+      >
+        Download PDF
+      </button>
     </div>
-  </section>
+  </div>
 </BaseLayout>
+
+<style>
+  @media print {
+    header nav, footer, button {
+      display: none !important;
+    }
+
+    body {
+      font-size: 11pt;
+    }
+
+    .container-narrow {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    section {
+      page-break-inside: avoid;
+    }
+
+    article {
+      page-break-inside: avoid;
+    }
+  }
+</style>

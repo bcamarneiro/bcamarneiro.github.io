@@ -47,9 +47,12 @@ const { title, description = "Bruno Camarneiro - Software Engineer" } = Astro.pr
     <footer class="border-t border-ink/10 py-16 mt-auto">
       <div class="container-wide">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-          <div>
-            <p class="font-serif font-semibold">Bruno Camarneiro</p>
-            <p class="text-sm text-graphite">Curious mind, crafted code.</p>
+          <div class="flex items-center gap-4">
+            <img src="/logo.png" alt="BC Logo" class="w-12 h-12 object-contain" />
+            <div>
+              <p class="font-serif font-semibold">Bruno Camarneiro</p>
+              <p class="text-sm text-graphite">Curious mind, crafted code.</p>
+            </div>
           </div>
           <div class="text-sm text-graphite">
             <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
