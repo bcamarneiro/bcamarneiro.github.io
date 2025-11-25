@@ -2,9 +2,8 @@
   "personal": {
     "name": "Bruno Camarneiro",
     "title": "Frontend Team Lead",
-    "email": "hello@camarneiro.com",
+    "email": "bruno@camarneiro.com",
     "location": "Porto Metropolitan Area, Portugal",
-    "website": "https://camarneiro.com",
     "linkedin": "https://linkedin.com/in/brunocamarneiro",
     "github": "https://github.com/bcamarneiro"
   },
@@ -19,11 +18,10 @@
       "endDate": null,
       "description": "Lead 7-engineer frontend team for enterprise consulting project, managing technical architecture and team performance. Develop features within established micro-frontend architecture using Lit web components and TypeScript.",
       "achievements": [
-        "Delivered production features within micro-frontend architecture using Lit web components and TypeScript",
-        "Established code review standards and technical decision-making process for the engineering team",
-        "Mentored engineers on TypeScript patterns, web components, and system design principles",
+        "Leading 7-engineer team delivering production features within micro-frontend architecture using Lit web components and TypeScript",
+        "Established code review standards and technical decision-making process across the engineering team",
         "Configured testing strategies and CI/CD pipelines maintaining code quality standards",
-        "Led technical discussions with stakeholders driving alignment on technical roadmap"
+        "Mentoring engineers on TypeScript patterns, web components, and system design principles"
       ],
       "skills": ["Lit", "TypeScript", "Micro-frontends", "Team Leadership", "Mentoring"],
       "visibility": ["all"]
@@ -37,10 +35,9 @@
       "endDate": "2025-05",
       "description": "Built production-grade user interfaces for decentralized hosting platform serving developers deploying Web3 applications. Worked in fully asynchronous remote team across multiple time zones (US, EU, LATAM).",
       "achievements": [
-        "Built core UI components for decentralized hosting platform using React and Next.js",
-        "Developed AI-powered conversational chatbot with image generation using LangChain and Eliza framework",
         "Optimized application performance from Lighthouse 30s to 90+ through code splitting, lazy loading, and bundle optimization",
-        "Implemented state management architecture with Zustand handling complex application state"
+        "Developed AI-powered conversational chatbot with image generation using LangChain and Eliza framework",
+        "Built core UI components and state management architecture with Zustand for decentralized hosting platform"
       ],
       "skills": ["React.js", "Next.js", "Zustand", "Tailwind CSS", "TypeScript", "LangChain", "Eliza"],
       "visibility": ["all"]
@@ -54,11 +51,9 @@
       "endDate": "2024-11",
       "description": "Architected and developed high-performance web applications using Next.js and TypeScript for carbon management platform. Led frontend optimization efforts for performance, accessibility, and SEO.",
       "achievements": [
-        "Engineered enterprise dashboard with Next.js achieving Lighthouse scores of 90+",
+        "Engineered enterprise dashboard with Next.js achieving Lighthouse scores of 90+ and WCAG 2.1 AA compliance",
         "Designed and implemented comprehensive testing suite with Jest and React Testing Library",
-        "Optimized Core Web Vitals metrics and integrated SEO best practices with meta tags",
-        "Conducted technical code reviews ensuring architectural consistency",
-        "Shipped WCAG 2.1 AA compliant interfaces for accessibility compliance"
+        "Optimized Core Web Vitals metrics and integrated SEO best practices"
       ],
       "skills": ["Next.js", "TypeScript", "Tailwind CSS", "React.js", "Jest", "Testing Library"],
       "visibility": ["all"]
@@ -70,13 +65,11 @@
       "location": "Porto, Portugal",
       "startDate": "2021-06",
       "endDate": "2023-07",
-      "description": "Delivered enterprise-grade frontend solutions for major international clients including Vodafone Germany, Ibersol Group, and Dreamlines cruise platform. Led technical initiatives and mentored junior engineers.",
+      "description": "Delivered enterprise-grade frontend solutions for major international clients including Vodafone Germany, Ibersol Group, and Dreamlines cruise platform.",
       "achievements": [
-        "Architected and delivered WordPress to React migration for e-commerce platform, building product catalog, galleries, and payment integration",
-        "Established testing strategy with Jest, Testing Library, and Cypress, improving code reliability across team",
-        "Conducted technical assessments and interviews for engineering candidates, mentored 2-3 junior developers on React patterns and testing practices",
-        "Shipped features for enterprise clients including Vodafone Germany and Ibersol Group",
-        "Automated build and deployment processes through Jenkins CI/CD pipelines"
+        "Architected and delivered WordPress to React migration for e-commerce platform with product catalog, galleries, and payment integration",
+        "Established testing strategy with Jest, Testing Library, and Cypress improving code reliability across team",
+        "Mentored 2-3 junior developers on React patterns and conducted technical interviews for engineering candidates"
       ],
       "skills": ["React.js", "styled-components", "Redux.js", "Testing Library", "Scrum", "Git", "REST APIs", "Jest", "Cypress", "TypeScript", "JavaScript"],
       "visibility": ["all"]
@@ -88,13 +81,11 @@
       "location": "Porto, Portugal",
       "startDate": "2019-06",
       "endDate": "2021-06",
-      "description": "Contributed to frontend development for Anova's IoT petrochemical monitoring platform and YOOX Net-a-Porter's luxury e-commerce site (The Outnet). Worked closely with architects on micro-frontend implementation.",
+      "description": "Contributed to frontend development for Anova's IoT petrochemical monitoring platform and YOOX Net-a-Porter's luxury e-commerce site (The Outnet).",
       "achievements": [
-        "Implemented micro-frontend modules for Anova's IoT platform working closely with system architects",
-        "Shipped features for The Outnet e-commerce platform integrating CoreMedia CMS for editorial content management",
-        "Engineered real-time dashboard for Anova monitoring petrochemical industry sensors",
-        "Reduced frontend bundle size through strategic code-splitting and lazy loading implementation",
-        "Conducted technical interviews for engineering candidates and mentored junior developers on React patterns"
+        "Implemented micro-frontend modules for Anova's IoT platform and real-time dashboard monitoring petrochemical sensors",
+        "Shipped features for The Outnet e-commerce platform integrating CoreMedia CMS",
+        "Reduced frontend bundle size through strategic code-splitting and lazy loading"
       ],
       "skills": ["React.js", "Redux.js", "Webpack", "Git", "REST APIs", "E2E", "Unit Testing", "Jenkins", "TypeScript", "JavaScript"],
       "visibility": ["all"]
@@ -109,9 +100,7 @@
       "description": "Delivered POC for Plinth, migrating from Angular 4 to React. Worked on AngularJS to React migration for Statful.",
       "achievements": [
         "Successfully migrated applications from Angular/AngularJS to React",
-        "Applied testing strategies with Selenium, Cypress, and Jest",
-        "Promoted Agile practices and collaborated closely with design and backend teams",
-        "Developed new features and improved application architecture"
+        "Applied testing strategies with Selenium, Cypress, and Jest"
       ],
       "skills": ["React.js", "Agile Methodologies", "HTML5", "Git", "REST APIs", "Jest", "Front-End Development", "Jenkins"],
       "visibility": ["all"]
@@ -123,12 +112,9 @@
       "location": "Porto",
       "startDate": "2015-07",
       "endDate": "2017-10",
-      "description": "Built a web-based TV application for Vodafone Portugal using AngularJS. Worked on feature development and migration from AngularJS to React for Statful.",
+      "description": "Built web-based TV application for Vodafone Portugal using AngularJS and contributed to React migration projects.",
       "achievements": [
-        "Developed web-based TV application for Vodafone Portugal",
-        "Implemented testing strategies using Jasmine, Cypress, and Selenium",
-        "Maintained and optimized HTML5, SASS and JS codebases",
-        "Contributed to AngularJS to React migration efforts"
+        "Developed web-based TV application for Vodafone Portugal with AngularJS"
       ],
       "skills": ["Agile Methodologies", "Git", "Jest", "Front-End Development", "AngularJS", "JavaScript", "HTML5", "SASS"],
       "visibility": ["all"]
@@ -140,10 +126,8 @@
       "location": "Vagos",
       "startDate": "2013-09",
       "endDate": "2015-06",
-      "description": "Worked on websites, dashboards, and Android applications, catering to diverse company needs.",
+      "description": "Worked on websites, dashboards, and Android applications.",
       "achievements": [
-        "Maintained codebases and contributed to frontend improvements",
-        "Enhanced application performance and user experience",
         "Developed Android applications alongside web projects"
       ],
       "skills": ["GitHub", "SASS", "HTML5", "Software Development", "Android Development"],
@@ -158,8 +142,7 @@
       "endDate": "2013-06",
       "description": "Internship developing an eCommerce website using WordPress.",
       "achievements": [
-        "Developed eCommerce website facilitating online sales and customer engagement",
-        "Applied SEO best practices for improved search visibility"
+        "Developed eCommerce website with WordPress and SEO optimization"
       ],
       "skills": ["Web Development", "HTML", "WordPress", "SASS", "Git", "Front-End Development", "SEO", "PHP"],
       "visibility": ["all"]

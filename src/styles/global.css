@@ -106,3 +106,13 @@
     animation-delay: 0.3s, 1.8s;
   }
 }
+
+/* Print Styles - Hide site header and footer globally */
+@media print {
+  body > header,
+  body > footer {
+    display: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+}
