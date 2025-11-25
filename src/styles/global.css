@@ -78,14 +78,21 @@
     }
   }
 
+  @keyframes fade-in-subtle {
+    from {
+      opacity: 0.06;
+    }
+    to {
+      opacity: 0.08;
+    }
+  }
+
   @keyframes subtle-pulse {
     0%, 100% {
       opacity: 0.08;
-      filter: brightness(1);
     }
     50% {
-      opacity: 0.12;
-      filter: brightness(0.8);
+      opacity: 0.10;
     }
   }
 
@@ -95,7 +102,7 @@
   }
 
   .animate-fade-in-pulse {
-    animation: fade-in 1.5s ease-in-out forwards, subtle-pulse 4s ease-in-out infinite;
+    animation: fade-in-subtle 1.5s ease-in-out forwards, subtle-pulse 4s ease-in-out infinite;
     animation-delay: 0.3s, 1.8s;
   }
 }
