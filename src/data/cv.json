@@ -8,7 +8,7 @@
     "linkedin": "https://linkedin.com/in/brunocamarneiro",
     "github": "https://github.com/bcamarneiro"
   },
-  "summary": "Frontend Team Lead with 12+ years of experience building scalable web applications for international clients across e-commerce, IoT, and decentralized platforms. Proven track record of leading engineering teams, architecting micro-frontend systems, and delivering high-performance applications. Deep expertise in React, TypeScript, Next.js, and modern JavaScript ecosystems. Experienced in mentoring developers, establishing testing practices, and driving technical excellence across cross-functional teams.",
+  "summary": "Frontend Team Lead with extensive experience building scalable web applications for international clients across e-commerce, IoT, and decentralized platforms. Proven track record of leading engineering teams, implementing micro-frontend systems, and delivering high-performance applications. Deep expertise in React, TypeScript, Next.js, and modern JavaScript ecosystems. Experienced in mentoring developers, establishing testing practices, and driving technical excellence across cross-functional teams.",
   "experience": [
     {
       "id": "exp-1",
@@ -19,8 +19,8 @@
       "endDate": null,
       "description": "Lead frontend engineering team for enterprise consulting project, managing technical architecture and team performance. Oversee micro-frontend implementation using Lit web components and TypeScript.",
       "achievements": [
-        "Lead team of 7 frontend engineers, conducting code reviews and architecture decisions",
-        "Architected micro-frontend system improving deployment independence and team scalability",
+        "Lead frontend engineering team, conducting code reviews and architecture decisions",
+        "Helped implement micro-frontend system improving deployment independence and team scalability",
         "Mentor engineers on advanced TypeScript patterns, web components, and system design",
         "Manage stakeholder communications and technical roadmap planning",
         "Establish testing strategies and CI/CD pipelines for quality assurance"
@@ -55,9 +55,9 @@
       "endDate": "2024-11",
       "description": "Architected and developed high-performance web applications using Next.js and TypeScript for carbon management platform. Led frontend optimization efforts for performance, accessibility, and SEO.",
       "achievements": [
-        "Built enterprise dashboard with Next.js achieving 95+ Lighthouse performance scores",
-        "Implemented comprehensive testing suite with Jest and React Testing Library (85% coverage)",
-        "Optimized Core Web Vitals reducing LCP by 40% and improving SEO rankings",
+        "Built enterprise dashboard with Next.js achieving excellent performance scores",
+        "Implemented comprehensive testing suite with Jest and React Testing Library",
+        "Optimized Core Web Vitals metrics, improving SEO rankings",
         "Conducted technical code reviews ensuring architectural consistency",
         "Delivered WCAG 2.1 AA compliant interfaces for accessibility compliance"
       ],
@@ -73,10 +73,10 @@
       "endDate": "2023-07",
       "description": "Delivered enterprise-grade frontend solutions for major international clients including Vodafone Germany, Ibersol Group, and Dreamlines cruise platform. Led technical initiatives and mentored junior engineers.",
       "achievements": [
-        "Architected and executed WordPress to React migration for Vodafone Germany, reducing load times by 60%",
-        "Established comprehensive testing strategy (Jest, Testing Library, Cypress) reducing production bugs by 45%",
-        "Led technical interviews and mentored 3 junior developers, improving team velocity",
-        "Delivered cruise booking platform for Dreamlines handling 10K+ daily transactions",
+        "Helped migrate WordPress to React implementation for Vodafone Germany, significantly improving load times",
+        "Established comprehensive testing strategy (Jest, Testing Library, Cypress) increasing code quality and reducing bugs",
+        "Led technical interviews and mentored junior developers, improving team velocity",
+        "Delivered cruise booking platform for Dreamlines supporting high transaction volumes",
         "Implemented CI/CD pipelines with Jenkins automating deployment processes"
       ],
       "skills": ["React.js", "styled-components", "Redux.js", "Testing Library", "Scrum", "Git", "REST APIs", "Jest", "Cypress", "TypeScript", "JavaScript"],
@@ -91,11 +91,11 @@
       "endDate": "2021-06",
       "description": "Architected frontend solutions for Anova's IoT petrochemical monitoring platform and YOOX Net-a-Porter's luxury e-commerce site (The Outnet). Led micro-frontend architecture implementation.",
       "achievements": [
-        "Architected micro-frontend system for The Outnet enabling independent team deployments",
-        "Integrated CoreMedia CMS for editorial content serving 2M+ monthly visitors",
-        "Built real-time IoT dashboard for Anova monitoring 500+ industrial sensors",
-        "Reduced frontend bundle size by 35% through code-splitting and lazy loading optimization",
-        "Mentored 4 junior developers on React patterns and testing best practices"
+        "Helped implement micro-frontend system for The Outnet enabling independent team deployments",
+        "Integrated CoreMedia CMS for editorial content at scale",
+        "Built real-time IoT dashboard for Anova monitoring industrial sensors at scale",
+        "Optimized frontend bundle size through code-splitting and lazy loading strategies",
+        "Mentored junior developers on React patterns and testing best practices"
       ],
       "skills": ["React.js", "Redux.js", "Webpack", "Git", "REST APIs", "E2E", "Unit Testing", "Jenkins", "TypeScript", "JavaScript"],
       "visibility": ["all"]
