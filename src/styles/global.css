@@ -67,3 +67,35 @@
     @apply prose-pre:bg-ink prose-pre:text-ivory;
   }
 }
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes subtle-pulse {
+    0%, 100% {
+      opacity: 0.08;
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 0.12;
+      filter: brightness(0.8);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .animate-fade-in-pulse {
+    animation: fade-in 1.5s ease-in-out forwards, subtle-pulse 4s ease-in-out infinite;
+    animation-delay: 0.3s, 1.8s;
+  }
+}
