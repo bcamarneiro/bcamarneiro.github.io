@@ -1,7 +1,10 @@
 {
+  "github": {
+    "silent": false,
+    "autoAlias": true
+  },
   "git": {
     "deploymentEnabled": {
-      "redesign-astro-minimal": true,
       "master": false
     }
   },
