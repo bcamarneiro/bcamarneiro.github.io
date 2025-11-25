@@ -10,9 +10,47 @@ const cv = cvData as CVData;
 const firstJobYear = 2013; // From cv.json first experience
 const currentYear = new Date().getFullYear();
 const yearsOfExperience = currentYear - firstJobYear;
+
+// Structured Data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": cv.personal.name,
+  "jobTitle": cv.personal.title,
+  "description": cv.summary,
+  "email": cv.personal.email,
+  "url": "https://camarneiro.com",
+  "sameAs": [
+    cv.personal.linkedin,
+    cv.personal.github
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Porto",
+    "addressRegion": "Porto Metropolitan Area",
+    "addressCountry": "PT"
+  },
+  "knowsAbout": [
+    "React.js",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Frontend Development",
+    "Team Leadership",
+    "Web Performance",
+    "Micro-frontends",
+    "Remote Work",
+    "Distributed Teams"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "PrimeIT"
+  }
+};
 ---
 
-<BaseLayout title="Home" description={`${cv.personal.name} - ${cv.personal.title}. ${cv.summary}`}>
+<BaseLayout title="Home" description="Bruno Camarneiro - Frontend Team Lead with 10+ years building scalable web applications for US and international clients. Expert in React, Next.js, TypeScript, and distributed team leadership. Available for remote work across US, EU, and LATAM time zones.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} is:inline />
   <!-- Hero Section -->
   <section class="min-h-screen flex items-center relative overflow-hidden">
     <!-- Animated Background Pattern -->

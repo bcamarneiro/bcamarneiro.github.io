@@ -4,9 +4,13 @@ import { features } from '../config';
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
 }
 
-const { title, description = "Bruno Camarneiro - Software Engineer" } = Astro.props;
+const { title, description = "Bruno Camarneiro - Frontend Team Lead with 10+ years building production web applications. Expert in React, Next.js, TypeScript. Remote work specialist across US, EU, and LATAM time zones.", ogImage = "/og-image.png" } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://camarneiro.com');
+const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Team Lead & Software Engineer' : `${title} | Bruno Camarneiro`;
 ---
 
 <!doctype html>
@@ -15,6 +19,28 @@ const { title, description = "Bruno Camarneiro - Software Engineer" } = Astro.pr
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="keywords" content="frontend engineer, react developer, typescript developer, nextjs developer, remote work, US remote jobs, team lead, software engineer, micro-frontends, web performance, distributed teams" />
+    <meta name="author" content="Bruno Camarneiro" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site || 'https://camarneiro.com')} />
+    <meta property="og:site_name" content="Bruno Camarneiro" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site || 'https://camarneiro.com')} />
+    <meta name="twitter:creator" content="@brunocamarneiro" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -23,7 +49,7 @@ const { title, description = "Bruno Camarneiro - Software Engineer" } = Astro.pr
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
 
-    <title>{title} | Bruno Camarneiro</title>
+    <title>{fullTitle}</title>
   </head>
   <body class="min-h-screen flex flex-col">
     <header class="sticky top-0 z-50 bg-beige/95 backdrop-blur-sm border-b border-ink/10">
