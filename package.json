@@ -14,13 +14,13 @@
     "url": "git+https://github.com/bcamarneiro/bcamarneiro.github.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bruno Camarneiro <bruno@camarneiro.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bcamarneiro/bcamarneiro.github.io/issues"
   },
   "homepage": "https://github.com/bcamarneiro/bcamarneiro.github.io#readme",
-  "description": "",
+  "description": "Personal portfolio and blog website for Bruno Camarneiro",
   "dependencies": {
     "@astrojs/mdx": "^4.3.12",
     "@astrojs/rss": "^4.0.14",
