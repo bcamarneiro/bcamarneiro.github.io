@@ -20,7 +20,7 @@ const { Content } = await post.render();
       <a href="/blog" class="text-sm text-graphite hover:text-copper mb-4 inline-block">&larr; Back to blog</a>
       <h1 class="text-4xl mb-2">{post.data.title}</h1>
       <time class="text-graphite">
-        {new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        {new Date(post.data.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
       </time>
     </header>
 
