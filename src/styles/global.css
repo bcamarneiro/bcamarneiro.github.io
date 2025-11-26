@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-beige text-ink font-sans antialiased leading-relaxed;
+  }
+
+  h1 {
+    @apply font-serif font-bold tracking-tight text-5xl md:text-6xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply font-serif font-semibold tracking-tight text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply font-serif font-semibold tracking-tight text-xl md:text-2xl;
+  }
+
+  h4, h5, h6 {
+    @apply font-serif font-medium tracking-tight;
+  }
+
+  a {
+    @apply text-copper hover:text-copper/80 transition-colors underline-offset-4;
+  }
+
+  code {
+    @apply font-mono bg-ink/5 px-1.5 py-0.5 rounded text-sm;
+  }
+
+  pre {
+    @apply font-mono bg-ink text-ivory p-4 rounded-lg overflow-x-auto;
+  }
+
+  pre code {
+    @apply bg-transparent p-0;
+  }
+
+  p {
+    @apply text-base md:text-lg;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-8 md:px-12;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-8 md:px-12;
+  }
+
+  .prose-custom {
+    @apply prose prose-neutral max-w-none;
+    @apply prose-headings:font-serif prose-headings:text-ink;
+    @apply prose-a:text-copper prose-a:no-underline hover:prose-a:underline;
+    @apply prose-code:text-ink prose-code:bg-ink/5;
+    @apply prose-pre:bg-ink prose-pre:text-ivory;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-subtle {
+    from {
+      opacity: 0.06;
+    }
+    to {
+      opacity: 0.08;
+    }
+  }
+
+  @keyframes subtle-pulse {
+    0%, 100% {
+      opacity: 0.08;
+    }
+    50% {
+      opacity: 0.10;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .animate-fade-in-pulse {
+    animation: fade-in-subtle 1.5s ease-in-out forwards, subtle-pulse 4s ease-in-out infinite;
+    animation-delay: 0.3s, 1.8s;
+  }
+}
+
+/* Print Styles - Hide site header and footer globally */
+@media print {
+  body > header,
+  body > footer {
+    display: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+}

@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { features } from '../config';
+import cvData from '../data/cv.json';
+import type { CVData } from '../types/cv';
+
+const cv = cvData as CVData;
+
+// Calculate years of experience dynamically
+const firstJobYear = 2013; // From cv.json first experience
+const currentYear = new Date().getFullYear();
+const yearsOfExperience = currentYear - firstJobYear;
+
+// Structured Data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": cv.personal.name,
+  "jobTitle": cv.personal.title,
+  "description": cv.summary,
+  "email": cv.personal.email,
+  "url": "https://camarneiro.com",
+  "sameAs": [
+    cv.personal.linkedin,
+    cv.personal.github
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Porto",
+    "addressRegion": "Porto Metropolitan Area",
+    "addressCountry": "PT"
+  },
+  "knowsAbout": [
+    "React.js",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Frontend Development",
+    "Team Leadership",
+    "Web Performance",
+    "Micro-frontends",
+    "Remote Work",
+    "Distributed Teams"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "PrimeIT"
+  }
+};
+---
+
+<BaseLayout title="Home" description="Bruno Camarneiro - Frontend Team Lead with 10+ years building scalable web applications for US and international clients. Expert in React, Next.js, TypeScript, and distributed team leadership. Available for remote work across US, EU, and LATAM time zones.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} is:inline />
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center relative overflow-hidden">
+    <!-- Animated Background Pattern -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,#171614_1px,transparent_1px),linear-gradient(to_bottom,#171614_1px,transparent_1px)] animate-fade-in-pulse" style="background-size: 4rem 4rem; background-position: 25px 50px; mask-image: radial-gradient(ellipse 50% 42% at 50% 0%, #000 70%, transparent 110%);"></div>
+    </div>
+
+    <div class="container-wide py-32">
+      <div class="max-w-5xl space-y-12">
+        <!-- Large Name Display -->
+        <div class="space-y-6">
+          <h1 class="text-6xl md:text-8xl lg:text-9xl font-light leading-[0.85] tracking-tighter">
+            {cv.personal.name.split(' ')[0]}<br/>{cv.personal.name.split(' ')[1]}
+          </h1>
+          <div>
+            <p class="text-2xl md:text-3xl text-graphite font-light">
+              Frontend Team Lead & Software Engineer
+            </p>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="pt-8 border-t border-ink/10 max-w-3xl">
+          <p class="text-xl md:text-2xl text-graphite/90 leading-relaxed font-light">
+            Extensive experience building scalable web applications for international clients.
+            Leading engineering teams and implementing micro-frontend systems for e-commerce, IoT, and decentralized platforms.
+          </p>
+        </div>
+
+        <!-- Key Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8 max-w-3xl">
+          <div>
+            <div class="text-3xl md:text-4xl font-light text-copper mb-2">{yearsOfExperience}+</div>
+            <div class="text-sm text-graphite">Years Experience</div>
+          </div>
+          <div>
+            <div class="text-3xl md:text-4xl font-light text-copper mb-2">Global</div>
+            <div class="text-sm text-graphite">Remote Experience</div>
+          </div>
+          <div>
+            <div class="text-3xl md:text-4xl font-light text-copper mb-2">US & EU</div>
+            <div class="text-sm text-graphite">Market Focus</div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex flex-wrap gap-6 pt-12">
+          <a
+            href="/cv"
+            class="group inline-flex items-center gap-3 text-xl font-light text-ink no-underline hover:text-copper transition-colors"
+          >
+            View Full CV
+            <span class="group-hover:translate-x-2 transition-transform text-2xl">→</span>
+          </a>
+          <a
+            href={cv.personal.linkedin}
+            target="_blank"
+            rel="noopener"
+            class="group inline-flex items-center gap-3 text-xl font-light text-graphite no-underline hover:text-copper transition-colors"
+          >
+            LinkedIn
+            <span class="group-hover:translate-x-2 transition-transform text-2xl">→</span>
+          </a>
+          <a
+            href={cv.personal.github}
+            target="_blank"
+            rel="noopener"
+            class="group inline-flex items-center gap-3 text-xl font-light text-graphite no-underline hover:text-copper transition-colors"
+          >
+            GitHub
+            <span class="group-hover:translate-x-2 transition-transform text-2xl">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Section -->
+  <section class="py-32 md:py-48 border-t border-ink/10">
+    <div class="container-wide">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-light mb-24">Expertise</h2>
+
+        <div class="space-y-24">
+          <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+            <span class="text-6xl text-copper/30 font-mono">01</span>
+            <div class="space-y-4">
+              <h3 class="text-2xl md:text-3xl font-light">Technical Leadership</h3>
+              <p class="text-xl text-graphite/80 leading-relaxed font-light max-w-2xl">
+                Leading teams through hands-on mentoring and pair programming. Flexible approach adapting to project needs—from full-time management to hands-on development. Experienced coordinating distributed teams across international time zones.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+            <span class="text-6xl text-copper/30 font-mono">02</span>
+            <div class="space-y-4">
+              <h3 class="text-2xl md:text-3xl font-light">Performance Engineering</h3>
+              <p class="text-xl text-graphite/80 leading-relaxed font-light max-w-2xl">
+                Delivering measurable performance improvements—from Lighthouse scores in the 30s to 90s. Removing complexity that blocks teams. Focus on real-world impact: faster load times, better Core Web Vitals, and empowering developers to ship confidently.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+            <span class="text-6xl text-copper/30 font-mono">03</span>
+            <div class="space-y-4">
+              <h3 class="text-2xl md:text-3xl font-light">Pragmatic Stack Choices</h3>
+              <p class="text-xl text-graphite/80 leading-relaxed font-light max-w-2xl">
+                Prioritizing stability and team productivity over trends. Introducing tools like MSW to unblock parallel development. Removing unnecessary complexity when it adds no value. Deep experience with React, TypeScript, Next.js, and modern tooling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {features.blog && (
+    <section class="py-32 md:py-48 border-t border-ink/10">
+      <div class="container-wide">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-end justify-between mb-16">
+            <h2 class="text-4xl md:text-5xl font-light">Writing</h2>
+            <a href="/blog" class="text-xl text-graphite hover:text-copper font-light no-underline group">
+              View all
+              <span class="inline-block group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+
+          <p class="text-xl text-graphite/70 font-light">
+            Technical articles and insights coming soon.
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>

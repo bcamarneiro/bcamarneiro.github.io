@@ -1,0 +1,231 @@
+{
+  "personal": {
+    "name": "Bruno Camarneiro",
+    "title": "Frontend Team Lead",
+    "email": "bruno@camarneiro.com",
+    "location": "Porto Metropolitan Area, Portugal",
+    "linkedin": "https://linkedin.com/in/brunocamarneiro",
+    "github": "https://github.com/bcamarneiro"
+  },
+  "summary": "Frontend Team Lead with 10+ years building production web applications for international clients across e-commerce, IoT, and Web3. Currently leading 7-engineer frontend team implementing micro-frontend architecture with Lit and TypeScript. Proven track record delivering high-performance applications (Lighthouse 30→90+ optimization), establishing comprehensive testing practices, and mentoring developers across async/distributed teams spanning US, EU, and LATAM time zones. Deep expertise in React, Next.js, TypeScript, and modern JavaScript ecosystems with strong focus on code quality and system design.",
+  "experience": [
+    {
+      "id": "exp-1",
+      "title": "Frontend Team Lead",
+      "company": "PrimeIT",
+      "location": "Porto, Portugal",
+      "startDate": "2025-06",
+      "endDate": null,
+      "description": "Lead 7-engineer frontend team for enterprise consulting project, managing technical architecture and team performance. Develop features within established micro-frontend architecture using Lit web components and TypeScript.",
+      "achievements": [
+        "Leading 7-engineer team delivering production features within micro-frontend architecture using Lit web components and TypeScript",
+        "Established code review standards and technical decision-making process across the engineering team",
+        "Configured testing strategies and CI/CD pipelines maintaining code quality standards",
+        "Mentoring engineers on TypeScript patterns, web components, and system design principles"
+      ],
+      "skills": ["Lit", "TypeScript", "Micro-frontends", "Team Leadership", "Mentoring"],
+      "visibility": ["all"]
+    },
+    {
+      "id": "exp-2",
+      "title": "Senior Software Engineer",
+      "company": "Fleek",
+      "location": "Remote",
+      "startDate": "2024-12",
+      "endDate": "2025-05",
+      "description": "Built production-grade user interfaces for decentralized hosting platform serving developers deploying Web3 applications. Worked in fully asynchronous remote team across multiple time zones (US, EU, LATAM).",
+      "achievements": [
+        "Optimized application performance from Lighthouse 30s to 90+ through code splitting, lazy loading, and bundle optimization",
+        "Developed AI-powered conversational chatbot with image generation using LangChain and Eliza framework",
+        "Built core UI components and state management architecture with Zustand for decentralized hosting platform"
+      ],
+      "skills": ["React.js", "Next.js", "Zustand", "Tailwind CSS", "TypeScript", "LangChain", "Eliza"],
+      "visibility": ["all"]
+    },
+    {
+      "id": "exp-3",
+      "title": "Senior Software Engineer",
+      "company": "carbonify GmbH",
+      "location": "Frankfurt am Main, Germany",
+      "startDate": "2023-11",
+      "endDate": "2024-11",
+      "description": "Architected and developed high-performance web applications using Next.js and TypeScript for carbon management platform. Led frontend optimization efforts for performance, accessibility, and SEO.",
+      "achievements": [
+        "Engineered enterprise dashboard with Next.js achieving Lighthouse scores of 90+ and WCAG 2.1 AA compliance",
+        "Designed and implemented comprehensive testing suite with Jest and React Testing Library",
+        "Optimized Core Web Vitals metrics and integrated SEO best practices"
+      ],
+      "skills": ["Next.js", "TypeScript", "Tailwind CSS", "React.js", "Jest", "Testing Library"],
+      "visibility": ["all"]
+    },
+    {
+      "id": "exp-4",
+      "title": "Senior Frontend Engineer",
+      "company": "craftable software",
+      "location": "Porto, Portugal",
+      "startDate": "2021-06",
+      "endDate": "2023-07",
+      "description": "Delivered enterprise-grade frontend solutions for major international clients including Vodafone Germany, Ibersol Group, and Dreamlines cruise platform.",
+      "achievements": [
+        "Architected and delivered WordPress to React migration for e-commerce platform with product catalog, galleries, and payment integration",
+        "Established testing strategy with Jest, Testing Library, and Cypress improving code reliability across team",
+        "Mentored 2-3 junior developers on React patterns and conducted technical interviews for engineering candidates"
+      ],
+      "skills": ["React.js", "styled-components", "Redux.js", "Testing Library", "Scrum", "Git", "REST APIs", "Jest", "Cypress", "TypeScript", "JavaScript"],
+      "visibility": ["all"]
+    },
+    {
+      "id": "exp-5",
+      "title": "Senior Frontend Engineer",
+      "company": "Mindera",
+      "location": "Porto, Portugal",
+      "startDate": "2019-06",
+      "endDate": "2021-06",
+      "description": "Contributed to frontend development for Anova's IoT petrochemical monitoring platform and YOOX Net-a-Porter's luxury e-commerce site (The Outnet).",
+      "achievements": [
+        "Implemented micro-frontend modules for Anova's IoT platform and real-time dashboard monitoring petrochemical sensors",
+        "Shipped features for The Outnet e-commerce platform integrating CoreMedia CMS",
+        "Reduced frontend bundle size through strategic code-splitting and lazy loading"
+      ],
+      "skills": ["React.js", "Redux.js", "Webpack", "Git", "REST APIs", "E2E", "Unit Testing", "Jenkins", "TypeScript", "JavaScript"],
+      "visibility": ["all"]
+    },
+    {
+      "id": "exp-6",
+      "title": "Frontend Engineer",
+      "company": "Mindera",
+      "location": "Porto, Portugal",
+      "startDate": "2017-10",
+      "endDate": "2019-06",
+      "description": "Delivered POC for Plinth, migrating from Angular 4 to React. Worked on AngularJS to React migration for Statful.",
+      "achievements": [
+        "Successfully migrated applications from Angular/AngularJS to React",
+        "Applied testing strategies with Selenium, Cypress, and Jest"
+      ],
+      "skills": ["React.js", "Agile Methodologies", "HTML5", "Git", "REST APIs", "Jest", "Front-End Development", "Jenkins"],
+      "visibility": ["all"]
+    },
+    {
+      "id": "exp-7",
+      "title": "IT Consultant",
+      "company": "Devoteam",
+      "location": "Porto",
+      "startDate": "2015-07",
+      "endDate": "2017-10",
+      "description": "Built web-based TV application for Vodafone Portugal using AngularJS and contributed to React migration projects.",
+      "achievements": [
+        "Developed web-based TV application for Vodafone Portugal with AngularJS"
+      ],
+      "skills": ["Agile Methodologies", "Git", "Jest", "Front-End Development", "AngularJS", "JavaScript", "HTML5", "SASS"],
+      "visibility": ["all"]
+    },
+    {
+      "id": "exp-8",
+      "title": "Software Developer",
+      "company": "RedeRia Innovation",
+      "location": "Vagos",
+      "startDate": "2013-09",
+      "endDate": "2015-06",
+      "description": "Worked on websites, dashboards, and Android applications.",
+      "achievements": [
+        "Developed Android applications alongside web projects"
+      ],
+      "skills": ["GitHub", "SASS", "HTML5", "Software Development", "Android Development"],
+      "visibility": ["all"]
+    },
+    {
+      "id": "exp-9",
+      "title": "Web Developer",
+      "company": "iNovmapping, LDA",
+      "location": "Coimbra",
+      "startDate": "2013-02",
+      "endDate": "2013-06",
+      "description": "Internship developing an eCommerce website using WordPress.",
+      "achievements": [
+        "Developed eCommerce website with WordPress and SEO optimization"
+      ],
+      "skills": ["Web Development", "HTML", "WordPress", "SASS", "Git", "Front-End Development", "SEO", "PHP"],
+      "visibility": ["all"]
+    }
+  ],
+  "skills": {
+    "technical": [
+      {
+        "category": "Frontend Engineering",
+        "skills": ["React", "Next.js", "TypeScript", "JavaScript (ES6+)", "Lit Web Components", "HTML5", "CSS3", "Tailwind CSS", "styled-components"]
+      },
+      {
+        "category": "State Management & Data",
+        "skills": ["Redux", "Zustand", "React Query", "REST APIs", "GraphQL", "WebSockets"]
+      },
+      {
+        "category": "Testing & Quality",
+        "skills": ["Jest", "React Testing Library", "Playwright", "Cypress", "E2E Testing", "Unit Testing", "Integration Testing", "TDD"]
+      },
+      {
+        "category": "Architecture & Performance",
+        "skills": ["Micro-frontends", "System Design", "Performance Optimization", "Code Splitting", "Lazy Loading", "SEO", "Core Web Vitals", "Accessibility (WCAG 2.1)"]
+      },
+      {
+        "category": "DevOps & Tools",
+        "skills": ["Git", "GitHub Actions", "GitLab CI", "Jenkins", "CI/CD", "Docker", "Docker Compose", "Webpack", "Vite", "Vercel"]
+      },
+      {
+        "category": "Cloud & Monitoring",
+        "skills": ["AWS (IAM, S3, SES)", "Datadog", "PostHog", "Google Analytics"]
+      },
+      {
+        "category": "Leadership & Collaboration",
+        "skills": ["Team Leadership", "Technical Mentoring", "Code Review", "Agile/Scrum", "Async/Remote Work", "Stakeholder Management"]
+      },
+      {
+        "category": "Emerging Tech",
+        "skills": ["LangChain", "AI Integration", "Web3", "Decentralized Apps"]
+      }
+    ],
+    "soft": [
+      "Team Leadership",
+      "Technical Mentoring",
+      "Stakeholder Management",
+      "Cross-functional Collaboration",
+      "Technical Communication",
+      "Problem Solving",
+      "Strategic Planning",
+      "Recruitment & Hiring"
+    ]
+  },
+  "education": [
+    {
+      "id": "edu-1",
+      "degree": "Master's degree, Software Engineering (Evening program)",
+      "institution": "Instituto Politécnico do Porto",
+      "location": "Porto, Portugal",
+      "startDate": "2025",
+      "endDate": null,
+      "description": "Currently pursuing",
+      "visibility": ["all"]
+    },
+    {
+      "id": "edu-2",
+      "degree": "Bachelor's degree, Computer Software Engineering",
+      "institution": "Instituto Superior de Engenharia de Coimbra",
+      "location": "Coimbra, Portugal",
+      "startDate": "2009",
+      "endDate": "2013",
+      "description": "Focus on software development and JavaScript",
+      "visibility": ["all"]
+    }
+  ],
+  "projects": [],
+  "certifications": [],
+  "languages": [
+    {
+      "name": "Portuguese",
+      "proficiency": "Native"
+    },
+    {
+      "name": "English",
+      "proficiency": "Fluent"
+    }
+  ]
+}

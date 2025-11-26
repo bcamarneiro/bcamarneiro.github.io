@@ -1,0 +1,94 @@
+---
+import { features } from '../config';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { title, description = "Bruno Camarneiro - Frontend Team Lead with 10+ years building production web applications. Expert in React, Next.js, TypeScript. Remote work specialist across US, EU, and LATAM time zones.", ogImage = "/og-image.png" } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://camarneiro.com');
+const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Team Lead & Software Engineer' : `${title} | Bruno Camarneiro`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="frontend engineer, react developer, typescript developer, nextjs developer, remote work, US remote jobs, team lead, software engineer, micro-frontends, web performance, distributed teams" />
+    <meta name="author" content="Bruno Camarneiro" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site || 'https://camarneiro.com')} />
+    <meta property="og:site_name" content="Bruno Camarneiro" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site || 'https://camarneiro.com')} />
+    <meta name="twitter:creator" content="@brunocamarneiro" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+
+    <title>{fullTitle}</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 bg-beige/95 backdrop-blur-sm border-b border-ink/10">
+      <nav class="container-wide py-6 flex items-center justify-between">
+        <a href="/" class="text-ink hover:text-ink no-underline group">
+          <span class="font-serif text-lg font-semibold tracking-tight">Bruno Camarneiro</span>
+        </a>
+        <ul class="flex items-center gap-8 text-base">
+          <li><a href="/" class="text-graphite hover:text-ink font-medium no-underline">Home</a></li>
+          <li><a href="/cv" class="text-graphite hover:text-ink font-medium no-underline">CV</a></li>
+          {features.portfolio && <li><a href="/portfolio" class="text-graphite hover:text-ink font-medium no-underline">Portfolio</a></li>}
+          {features.blog && <li><a href="/blog" class="text-graphite hover:text-ink font-medium no-underline">Blog</a></li>}
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-ink/10 py-16 mt-auto">
+      <div class="container-wide">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+          <div class="flex items-center gap-4">
+            <img src="/logo.png" alt="BC Logo" class="w-12 h-12 object-contain" />
+            <div>
+              <p class="font-serif font-semibold">Bruno Camarneiro</p>
+              <p class="text-sm text-graphite">Frontend Team Lead & Software Engineer</p>
+            </div>
+          </div>
+          <div class="text-sm text-graphite">
+            <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

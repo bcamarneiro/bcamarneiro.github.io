@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Filter out drafts and future posts
+const posts = await getCollection('blog', ({ data }) => {
+  const now = new Date();
+  const publishDate = new Date(data.publishedAt);
+  return !data.draft && publishDate <= now;
+});
+
+// Sort by publish date, newest first
+const sortedPosts = posts.sort((a, b) =>
+  new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime()
+);
+---
+
+<BaseLayout title="Blog" description="Articles and thoughts by Bruno Camarneiro.">
+  <section class="container-narrow py-16">
+    <h1 class="text-4xl mb-2">Blog</h1>
+    <p class="text-graphite mb-12">Thoughts, tutorials, and insights.</p>
+
+    {sortedPosts.length === 0 ? (
+      <div class="text-center py-12">
+        <p class="text-graphite mb-4">No posts yet. Check back soon!</p>
+      </div>
+    ) : (
+      <div class="space-y-8">
+        {sortedPosts.map(post => (
+          <article class="group">
+            <a href={`/blog/${post.slug}`} class="block">
+              <time class="text-sm text-graphite">{new Date(post.data.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+              <h2 class="text-xl font-serif mt-1 group-hover:text-copper transition-colors">
+                {post.data.title}
+              </h2>
+              <p class="text-graphite mt-2">{post.data.description}</p>
+            </a>
+          </article>
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>
