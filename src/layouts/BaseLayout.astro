@@ -30,7 +30,7 @@ const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Team Lead & So
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(ogImage, Astro.site || 'https://camarneiro.com')} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site || 'https://camarneiro.com').href} />
     <meta property="og:site_name" content="Bruno Camarneiro" />
     <meta property="og:locale" content="en_US" />
 
@@ -39,7 +39,7 @@ const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Team Lead & So
     <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(ogImage, Astro.site || 'https://camarneiro.com')} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site || 'https://camarneiro.com').href} />
     <meta name="twitter:creator" content="@brunocamarneiro" />
 
     <!-- Favicons -->
