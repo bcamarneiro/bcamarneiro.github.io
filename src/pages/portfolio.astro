@@ -1,5 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { features } from '../config';
+
+// Redirect to home if portfolio feature is disabled
+if (!features.portfolio) {
+  return Astro.redirect('/');
+}
 
 const projects = [
   {
