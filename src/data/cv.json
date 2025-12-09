@@ -216,7 +216,22 @@
       "visibility": ["all"]
     }
   ],
-  "projects": [],
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "Jira Timesheet Report",
+      "description": "Browser-based time tracking dashboard that integrates with Jira to display, filter, and export team worklogs in a calendar view. Runs entirely in the browser with no backend required.",
+      "github": "https://github.com/bcamarneiro/jira-timesheet-report",
+      "technologies": ["React", "TypeScript", "Zustand", "Rspack", "Vitest", "Playwright", "MSW"],
+      "highlights": [
+        "Calendar view with monthly worklog visualization and team overview",
+        "CSV export for individual or bulk timesheet reports",
+        "Offline development mode using MSW for API mocking",
+        "Retroactive worklog detection for past-dated entries"
+      ],
+      "visibility": ["hidden"]
+    }
+  ],
   "certifications": [],
   "languages": [
     {
