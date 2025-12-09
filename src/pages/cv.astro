@@ -360,32 +360,39 @@ function calculateDuration(start: string, end: string | null): string {
       </section>
     )}
 
-    <!-- Download/Print Button -->
-    <div class="flex justify-center pt-8 border-t border-ink/10">
-      <button
-        onclick="window.print()"
-        class="px-6 py-3 bg-ink text-beige rounded-lg hover:bg-ink/90 transition-colors font-medium"
+    <!-- Download/Print Buttons -->
+    <div class="flex justify-center gap-4 pt-8 border-t border-ink/10">
+      <a
+        href="/cv.pdf"
+        download="Bruno_Camarneiro_CV.pdf"
+        class="px-6 py-3 bg-ink text-beige rounded-lg hover:bg-ink/90 transition-colors font-medium no-underline"
       >
         Download PDF
-      </button>
+      </a>
     </div>
   </div>
 </BaseLayout>
 
 <style>
   @media print {
-    /* Hide ALL navigation, footer, and buttons */
+    /* Hide ALL navigation, footer, buttons, and download links */
     body > header,
     body > footer,
     header nav,
     footer,
     button,
-    nav {
+    nav,
+    a[download] {
       display: none !important;
       visibility: hidden !important;
       height: 0 !important;
       margin: 0 !important;
       padding: 0 !important;
+    }
+
+    /* Hide the download/print button container */
+    .container-narrow > div:last-child {
+      display: none !important;
     }
 
     /* Hide Key Achievements section in print (2nd section after Summary) */
@@ -600,10 +607,17 @@ function calculateDuration(start: string, end: string | null): string {
       widows: 2;
     }
 
-    /* Make icons smaller */
-    svg {
+    /* Make icons smaller - target both SVG element and Tailwind size classes */
+    svg,
+    svg.w-4,
+    svg.h-4,
+    .w-4.h-4 {
       width: 0.65rem !important;
       height: 0.65rem !important;
+      min-width: 0.65rem !important;
+      min-height: 0.65rem !important;
+      max-width: 0.65rem !important;
+      max-height: 0.65rem !important;
     }
 
     /* Tighter date/duration display */

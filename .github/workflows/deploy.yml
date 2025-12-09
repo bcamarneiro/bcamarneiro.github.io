@@ -26,7 +26,22 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+
+      # Install Chrome for Puppeteer PDF generation
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+        id: setup-chrome
+
       - run: npm run build
+
+      # Generate CV PDF using Puppeteer
+      - name: Generate CV PDF
+        run: npm run generate:pdf
+        env:
+          CHROME_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
