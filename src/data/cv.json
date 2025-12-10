@@ -7,7 +7,7 @@
     "linkedin": "https://linkedin.com/in/brunocamarneiro",
     "github": "https://github.com/bcamarneiro"
   },
-  "summary": "Frontend Team Lead with 10+ years building production web applications for international clients across e-commerce, IoT, and Web3. Currently leading 7-engineer frontend team implementing micro-frontend architecture with Lit and TypeScript. Proven track record delivering high-performance applications (Lighthouse 30→90+ optimization), establishing comprehensive testing practices, and mentoring developers across async/distributed teams spanning US, EU, and LATAM time zones. Deep expertise in React, Next.js, TypeScript, and modern JavaScript ecosystems with strong focus on code quality and system design.",
+  "summary": "Frontend Team Lead with 10+ years building production web applications for international clients across e-commerce, IoT, and Web3. Currently leading 7-engineer frontend team implementing micro-frontend architecture with Lit and TypeScript. Proven track record delivering high-performance applications (Lighthouse 30→90+ optimization), establishing comprehensive testing practices, and mentoring developers across async/distributed teams spanning US, EU, and LATAM time zones. Deep expertise in React, Next.js, TypeScript, and modern JavaScript ecosystems with growing focus on AI-integrated applications and LLM-powered tooling.",
   "experience": [
     {
       "id": "exp-1",
@@ -35,7 +35,7 @@
       "endDate": "2025-05",
       "description": "Built production-grade user interfaces for decentralized hosting platform serving developers deploying Web3 applications. Collaborated asynchronously across US, EU, and LATAM time zones using written documentation and async communication practices. Company underwent significant restructuring with 95% workforce reduction.",
       "achievements": [
-        "Optimized application performance from Lighthouse 30s to 90+ through code splitting, lazy loading, and bundle optimization",
+        "Optimized homepage performance from Lighthouse 30 to 90+ through image optimization, animation conversion to WebM, lazy loading below-fold components, and per-page bundle splitting",
         "Developed AI-powered conversational chatbot with image generation using LangChain and Eliza framework",
         "Built core UI components and state management architecture with Zustand for decentralized hosting platform"
       ],
