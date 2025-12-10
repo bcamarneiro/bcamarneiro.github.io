@@ -131,7 +131,7 @@
         "Developed Android applications alongside web projects"
       ],
       "skills": ["GitHub", "SASS", "HTML5", "Software Development", "Android Development"],
-      "visibility": ["all"]
+      "visibility": ["hidden"]
     },
     {
       "id": "exp-9",
@@ -145,7 +145,7 @@
         "Developed eCommerce website with WordPress and SEO optimization"
       ],
       "skills": ["Web Development", "HTML", "WordPress", "SASS", "Git", "Front-End Development", "SEO", "PHP"],
-      "visibility": ["all"]
+      "visibility": ["hidden"]
     }
   ],
   "skills": {
