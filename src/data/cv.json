@@ -7,7 +7,7 @@
     "linkedin": "https://linkedin.com/in/brunocamarneiro",
     "github": "https://github.com/bcamarneiro"
   },
-  "summary": "Frontend Team Lead with 10+ years building production web applications for international clients across e-commerce, IoT, and Web3. Currently leading 7-engineer frontend team implementing micro-frontend architecture with Lit and TypeScript. Proven track record delivering high-performance applications (Lighthouse 30→90+ optimization), establishing comprehensive testing practices, and mentoring developers across async/distributed teams spanning US, EU, and LATAM time zones. Deep expertise in React, Next.js, TypeScript, and modern JavaScript ecosystems with growing focus on AI-integrated applications and LLM-powered tooling.",
+  "summary": "Frontend Team Lead with 10+ years building web applications for international clients across e-commerce, IoT, and Web3. Currently leading a 7-engineer frontend team working with micro-frontend architecture, Lit web components, and TypeScript. Track record of delivering high-performance applications (improved Lighthouse scores from 30 to 90+), building testing practices from scratch, and mentoring developers across distributed teams in US, EU, and LATAM time zones. Strong expertise in React, Next.js, and TypeScript with growing focus on AI-integrated applications.",
   "experience": [
     {
       "id": "exp-1",
@@ -16,12 +16,11 @@
       "location": "Porto, Portugal",
       "startDate": "2025-06",
       "endDate": null,
-      "description": "Lead 7-engineer frontend team for enterprise consulting project, managing technical architecture and team performance. Develop features within established micro-frontend architecture using Lit web components and TypeScript.",
+      "description": "Managing technical architecture, sprint planning, and performance reviews for frontend team on enterprise consulting project.",
       "achievements": [
-        "Leading 7-engineer team delivering production features within micro-frontend architecture using Lit web components and TypeScript",
-        "Established code review standards and technical decision-making process across the engineering team",
-        "Configured testing strategies and CI/CD pipelines maintaining code quality standards",
-        "Mentoring engineers on TypeScript patterns, web components, and system design principles"
+        "Set up code review standards and defined technical decision-making process for the team",
+        "Configured Jest and Playwright testing with CI/CD pipelines in GitLab",
+        "Mentoring engineers on TypeScript patterns, web components, and system design"
       ],
       "skills": ["Lit", "TypeScript", "Micro-frontends", "Team Leadership", "Mentoring"],
       "visibility": ["all"]
@@ -33,11 +32,11 @@
       "location": "Remote",
       "startDate": "2024-12",
       "endDate": "2025-05",
-      "description": "Built production-grade user interfaces for decentralized hosting platform serving developers deploying Web3 applications. Collaborated asynchronously across US, EU, and LATAM time zones using written documentation and async communication practices. Company underwent significant restructuring with 95% workforce reduction.",
+      "description": "Built user interfaces for decentralized hosting platform. Worked async across US, EU, and LATAM time zones. Company had 95% workforce reduction during restructuring.",
       "achievements": [
-        "Optimized homepage performance from Lighthouse 30 to 90+ through image optimization, animation conversion to WebM, lazy loading below-fold components, and per-page bundle splitting",
-        "Built AI chat interfaces for LangChain and Eliza frameworks, including published embeddable widget (@fleek-platform/agents-chatbox-widget) for customer chatbot deployment",
-        "Built core UI components and state management architecture with Zustand for decentralized hosting platform"
+        "Improved homepage Lighthouse score from 30 to 90+ by optimizing images, converting animations to WebM, adding lazy loading, and splitting bundles per page",
+        "Built AI chat interfaces using LangChain and Eliza frameworks; published npm package (@fleek-platform/agents-chatbox-widget) for embeddable chatbots",
+        "Developed UI component library and state management with Zustand"
       ],
       "skills": ["React.js", "Next.js", "Zustand", "Tailwind CSS", "TypeScript", "LangChain", "Eliza"],
       "visibility": ["all"]
@@ -45,15 +44,15 @@
     {
       "id": "exp-3",
       "title": "Senior Software Engineer",
-      "company": "carbonify GmbH",
+      "company": "Carbonify GmbH",
       "location": "Frankfurt am Main, Germany",
-      "startDate": "2023-11",
+      "startDate": "2023-08",
       "endDate": "2024-11",
-      "description": "Architected and developed high-performance web applications for carbon certificate cashback platform, both as company product and white-label solution for partners including ADAC (Germany's largest automotive club).",
+      "description": "Built web applications for carbon certificate cashback platform, both as main product and white-label solution for partners like ADAC (Germany's largest automotive club).",
       "achievements": [
-        "Engineered vehicle submission and tracking dashboard with Next.js achieving Lighthouse scores of 90+ and WCAG 2.1 AA compliance",
-        "Designed and implemented comprehensive testing suite with Jest and React Testing Library",
-        "Optimized Core Web Vitals metrics and integrated SEO best practices"
+        "Built vehicle submission and tracking dashboard with Next.js; achieved Lighthouse 90+ and WCAG 2.1 AA accessibility",
+        "Set up testing with Jest and React Testing Library from scratch",
+        "Improved Core Web Vitals and implemented SEO best practices"
       ],
       "skills": ["Next.js", "TypeScript", "Tailwind CSS", "React.js", "Jest", "Testing Library"],
       "visibility": ["all"]
@@ -61,7 +60,7 @@
     {
       "id": "exp-4",
       "title": "Senior Frontend Engineer",
-      "company": "craftable software",
+      "company": "Craftable Software",
       "location": "Porto, Portugal",
       "startDate": "2021-06",
       "endDate": "2023-07",
@@ -184,9 +183,6 @@
       }
     ],
     "soft": [
-      "Team Leadership",
-      "Technical Mentoring",
-      "Stakeholder Management",
       "Cross-functional Collaboration",
       "Technical Communication",
       "Problem Solving",

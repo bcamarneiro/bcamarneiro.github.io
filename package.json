@@ -8,7 +8,10 @@
     "build:pdf": "astro build && tsx scripts/generate-pdf.ts",
     "generate:pdf": "tsx scripts/generate-pdf.ts",
     "preview": "astro preview",
-    "publish:devto": "tsx scripts/publish-to-devto.ts"
+    "publish:devto": "tsx scripts/publish-to-devto.ts",
+    "cv:markdown": "tsx scripts/export-markdown.ts 2>/dev/null",
+    "cv:linkedin": "tsx scripts/export-linkedin.ts",
+    "cv:pdf:tailored": "tsx scripts/generate-tailored-pdf.ts"
   },
   "type": "module",
   "repository": {
