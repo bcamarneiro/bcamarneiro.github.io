@@ -33,7 +33,7 @@
       "location": "Remote",
       "startDate": "2024-12",
       "endDate": "2025-05",
-      "description": "Built production-grade user interfaces for decentralized hosting platform serving developers deploying Web3 applications. Worked in fully asynchronous remote team across multiple time zones (US, EU, LATAM).",
+      "description": "Built production-grade user interfaces for decentralized hosting platform serving developers deploying Web3 applications. Collaborated asynchronously across US, EU, and LATAM time zones using written documentation and async communication practices. Company underwent significant restructuring with 95% workforce reduction.",
       "achievements": [
         "Optimized application performance from Lighthouse 30s to 90+ through code splitting, lazy loading, and bundle optimization",
         "Developed AI-powered conversational chatbot with image generation using LangChain and Eliza framework",
@@ -197,7 +197,7 @@
   "education": [
     {
       "id": "edu-1",
-      "degree": "Master's degree, Software Engineering (Evening program)",
+      "degree": "Master's degree, Artificial Intelligence Engineering (Evening program)",
       "institution": "Instituto Politécnico do Porto",
       "location": "Porto, Portugal",
       "startDate": "2025",
@@ -219,6 +219,20 @@
   "projects": [
     {
       "id": "proj-1",
+      "name": "Job Sentinel",
+      "description": "LLM-powered job search automation tool built as a meta-experiment: using AI-assisted development to build an AI-powered application. Features multi-agent LangGraph workflow for job scraping, parsing, and matching.",
+      "github": "https://github.com/bcamarneiro/job-sentinel",
+      "technologies": ["Python", "LangGraph", "Ollama", "Streamlit", "SQLAlchemy", "Playwright"],
+      "highlights": [
+        "Multi-agent LLM workflow with parser, matcher, coordinator, and discovery agents",
+        "Clean Architecture with 14.7K LOC across domain, application, and infrastructure layers",
+        "Support for 4+ job board platforms (Greenhouse, Lever, Workable, BambooHR)",
+        "88+ tests with comprehensive unit and integration coverage"
+      ],
+      "visibility": ["hidden"]
+    },
+    {
+      "id": "proj-2",
       "name": "Jira Timesheet Report",
       "description": "Browser-based time tracking dashboard that integrates with Jira to display, filter, and export team worklogs in a calendar view. Runs entirely in the browser with no backend required.",
       "github": "https://github.com/bcamarneiro/jira-timesheet-report",
