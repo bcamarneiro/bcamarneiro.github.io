@@ -9,7 +9,7 @@
     "generate:pdf": "tsx scripts/generate-pdf.ts",
     "preview": "astro preview",
     "publish:devto": "tsx scripts/publish-to-devto.ts",
-    "cv:markdown": "tsx scripts/export-markdown.ts 2>/dev/null",
+    "cv:markdown": "tsx scripts/export-markdown.ts",
     "cv:linkedin": "tsx scripts/export-linkedin.ts",
     "cv:pdf:tailored": "tsx scripts/generate-tailored-pdf.ts"
   },
