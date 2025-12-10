@@ -67,7 +67,7 @@
       "endDate": "2023-07",
       "description": "Delivered enterprise-grade frontend solutions for major international clients including Vodafone Germany, Ibersol Group, and Dreamlines cruise platform.",
       "achievements": [
-        "Architected and delivered WordPress to React migration for e-commerce platform with product catalog, galleries, and payment integration",
+        "Architected WordPress to React migration for Dreamlines cruise platform (product pages, homepage, cart), improving load times by removing Cloudflare Worker middleware",
         "Established testing strategy with Jest, Testing Library, and Cypress improving code reliability across team",
         "Mentored 2-3 junior developers on React patterns and conducted technical interviews for engineering candidates"
       ],
@@ -85,7 +85,7 @@
       "achievements": [
         "Implemented micro-frontend modules for Anova's IoT platform and real-time dashboard monitoring petrochemical sensors",
         "Shipped features for The Outnet e-commerce platform integrating CoreMedia CMS",
-        "Reduced frontend bundle size through strategic code-splitting and lazy loading"
+        "Reduced frontend bundle size for The Outnet content pages (homepage, blog, articles) through strategic code-splitting and lazy loading"
       ],
       "skills": ["React.js", "Redux.js", "Webpack", "Git", "REST APIs", "E2E", "Unit Testing", "Jenkins", "TypeScript", "JavaScript"],
       "visibility": ["all"]
@@ -97,7 +97,7 @@
       "location": "Porto, Portugal",
       "startDate": "2017-10",
       "endDate": "2019-06",
-      "description": "Delivered POC for Plinth, migrating from Angular 4 to React. Worked on AngularJS to React migration for Statful.",
+      "description": "Built POC for Plinth (real estate crowdfunding startup), migrating from Angular 4 to React. Worked on AngularJS to React migration for Statful monitoring platform.",
       "achievements": [
         "Successfully migrated applications from Angular/AngularJS to React",
         "Applied testing strategies with Selenium, Cypress, and Jest"
@@ -112,9 +112,9 @@
       "location": "Porto",
       "startDate": "2015-07",
       "endDate": "2017-10",
-      "description": "Built web-based TV application for Vodafone Portugal using AngularJS and contributed to React migration projects.",
+      "description": "Built browser-based TV application for Vodafone Portugal, replicating the set-top box experience in the web browser using AngularJS.",
       "achievements": [
-        "Developed web-based TV application for Vodafone Portugal with AngularJS"
+        "Developed browser-based TV application mirroring set-top box UX for Vodafone Portugal"
       ],
       "skills": ["Agile Methodologies", "Git", "Jest", "Front-End Development", "AngularJS", "JavaScript", "HTML5", "SASS"],
       "visibility": ["all"]
