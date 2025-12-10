@@ -6,12 +6,14 @@
  * Useful for tailoring CV content with AI assistance.
  *
  * Usage:
- *   npm run cv:markdown              # Output to stdout
- *   npm run cv:markdown > cv.md      # Save to file
+ *   npm run --silent cv:markdown              # Output to stdout (clean)
+ *   npm run --silent cv:markdown > cv.md      # Save to file
  *
  * Options:
- *   --visible-only    Only include items with visibility: ["all"]
  *   --include-hidden  Include all items regardless of visibility
+ *
+ * Note: Use --silent to suppress npm's command output when piping to a file.
+ *       The PDF generator (cv:pdf:tailored) automatically strips this output.
  */
 
 import fs from 'fs';
