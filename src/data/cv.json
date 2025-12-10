@@ -36,7 +36,7 @@
       "description": "Built production-grade user interfaces for decentralized hosting platform serving developers deploying Web3 applications. Collaborated asynchronously across US, EU, and LATAM time zones using written documentation and async communication practices. Company underwent significant restructuring with 95% workforce reduction.",
       "achievements": [
         "Optimized homepage performance from Lighthouse 30 to 90+ through image optimization, animation conversion to WebM, lazy loading below-fold components, and per-page bundle splitting",
-        "Developed AI-powered conversational chatbot with image generation using LangChain and Eliza framework",
+        "Built AI chat interfaces for LangChain and Eliza frameworks, including published embeddable widget (@fleek-platform/agents-chatbox-widget) for customer chatbot deployment",
         "Built core UI components and state management architecture with Zustand for decentralized hosting platform"
       ],
       "skills": ["React.js", "Next.js", "Zustand", "Tailwind CSS", "TypeScript", "LangChain", "Eliza"],
@@ -49,9 +49,9 @@
       "location": "Frankfurt am Main, Germany",
       "startDate": "2023-11",
       "endDate": "2024-11",
-      "description": "Architected and developed high-performance web applications using Next.js and TypeScript for carbon management platform. Led frontend optimization efforts for performance, accessibility, and SEO.",
+      "description": "Architected and developed high-performance web applications for carbon certificate cashback platform, both as company product and white-label solution for partners including ADAC (Germany's largest automotive club).",
       "achievements": [
-        "Engineered enterprise dashboard with Next.js achieving Lighthouse scores of 90+ and WCAG 2.1 AA compliance",
+        "Engineered vehicle submission and tracking dashboard with Next.js achieving Lighthouse scores of 90+ and WCAG 2.1 AA compliance",
         "Designed and implemented comprehensive testing suite with Jest and React Testing Library",
         "Optimized Core Web Vitals metrics and integrated SEO best practices"
       ],
@@ -217,6 +217,18 @@
     }
   ],
   "projects": [
+    {
+      "id": "proj-0",
+      "name": "Fleek Agents Chatbox Widget",
+      "description": "Embeddable chat widget for AI-powered chatbots built on the Eliza framework. Published as npm package for customer chatbot deployment.",
+      "url": "https://www.npmjs.com/package/@fleek-platform/agents-chatbox-widget",
+      "technologies": ["React", "TypeScript", "Eliza"],
+      "highlights": [
+        "Published npm package for embedding AI chatbots",
+        "Built for Fleek's AI agents platform"
+      ],
+      "visibility": ["hidden"]
+    },
     {
       "id": "proj-1",
       "name": "Job Sentinel",
