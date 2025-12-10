@@ -246,7 +246,14 @@ async function generatePDF(inputPath: string, outputPath: string) {
     process.exit(1);
   }
 
-  const markdown = fs.readFileSync(inputPath, 'utf-8');
+  let markdown = fs.readFileSync(inputPath, 'utf-8');
+
+  // Strip npm output lines that may appear when using `npm run cv:markdown > file.md`
+  // These lines look like: "> package-name@version script-name" and "> command"
+  markdown = markdown.replace(/^>\s+\S+@[\d.]+\s+\S+\n/gm, '');
+  markdown = markdown.replace(/^>\s+tsx\s+\S+\n/gm, '');
+  markdown = markdown.replace(/^\n+/, ''); // Remove leading empty lines
+
   const html = markdownToHtml(markdown);
 
   const chromePath = findChromePath();
