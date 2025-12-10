@@ -198,7 +198,6 @@
       "location": "Porto, Portugal",
       "startDate": "2025",
       "endDate": null,
-      "description": "Currently pursuing",
       "visibility": ["all"]
     },
     {
@@ -208,7 +207,6 @@
       "location": "Coimbra, Portugal",
       "startDate": "2009",
       "endDate": "2013",
-      "description": "Focus on software development and JavaScript",
       "visibility": ["all"]
     }
   ],
