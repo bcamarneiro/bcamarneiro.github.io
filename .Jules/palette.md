@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility improvements: Focus indicators and Skip Links
+**Learning:** Navigating via keyboard needs more visual cues. While Tailwind's basic styles are nice, specific interactive elements like links and buttons lack clear visible focus rings. Additionally, giving screen reader and keyboard users a way to skip repeated header content directly to the main body drastically improves time-to-navigate.
+**Action:** Added `focus-visible` outline rings to all links via `src/styles/global.css` and introduced a "Skip to content" link inside `src/layouts/BaseLayout.astro`. In future projects, ensure skip links are standard and verify keyboard focus cues early in the design process.
