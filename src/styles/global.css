@@ -13,6 +13,10 @@
     @apply bg-beige text-ink font-sans antialiased leading-relaxed;
   }
 
+  *:focus-visible {
+    @apply outline-none ring-2 ring-copper ring-offset-2 ring-offset-beige rounded-sm;
+  }
+
   h1 {
     @apply font-serif font-bold tracking-tight text-5xl md:text-6xl lg:text-7xl;
   }
