@@ -290,7 +290,7 @@ function calculateDuration(start: string, end: string | null): string {
 
               {cert.url && (
                 <a href={cert.url} class="text-copper hover:text-ink transition-colors text-sm" target="_blank" rel="noopener">
-                  View Credential →
+                  View Credential <span aria-hidden="true">→</span>
                 </a>
               )}
             </article>
@@ -311,12 +311,12 @@ function calculateDuration(start: string, end: string | null): string {
                 <div class="flex gap-2">
                   {project.url && (
                     <a href={project.url} class="text-copper hover:text-ink transition-colors no-underline text-sm" target="_blank" rel="noopener">
-                      Live →
+                      Live <span aria-hidden="true">→</span>
                     </a>
                   )}
                   {project.github && (
                     <a href={project.github} class="text-copper hover:text-ink transition-colors no-underline text-sm" target="_blank" rel="noopener">
-                      Code →
+                      Code <span aria-hidden="true">→</span>
                     </a>
                   )}
                 </div>
