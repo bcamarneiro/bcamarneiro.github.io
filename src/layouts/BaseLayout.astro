@@ -52,6 +52,9 @@ const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Team Lead & So
     <title>{fullTitle}</title>
   </head>
   <body class="min-h-screen flex flex-col">
+    <a href="#main-content" class="sr-only focus-visible:not-sr-only focus-visible:absolute focus-visible:top-4 focus-visible:left-4 focus-visible:z-[100] focus-visible:bg-ink focus-visible:text-beige focus-visible:px-4 focus-visible:py-2 focus-visible:rounded-md focus-visible:font-medium">
+      Skip to content
+    </a>
     <header class="sticky top-0 z-50 bg-beige/95 backdrop-blur-sm border-b border-ink/10">
       <nav class="container-wide py-6 flex items-center justify-between">
         <a href="/" class="text-ink hover:text-ink no-underline group">
@@ -66,7 +69,7 @@ const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Team Lead & So
       </nav>
     </header>
 
-    <main class="flex-1">
+    <main id="main-content" tabindex="-1" class="flex-1 outline-none">
       <slot />
     </main>
 
