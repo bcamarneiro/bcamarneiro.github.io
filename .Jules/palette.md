@@ -1,0 +1,3 @@
+## 2026-04-29 - Keyboard Navigation & Screen Reader Support in Astro Layouts
+**Learning:** Adding a "Skip to content" link and visual active states (via `aria-current="page"`) on navigation menus significantly improves keyboard and screen reader accessibility, especially in SPA-like frameworks (like Astro) where focus management between pages can be tricky. Using Astro's built-in `Astro.url.pathname` allows for server-side evaluation of the active state without client-side JavaScript.
+**Action:** Always include a hidden, keyboard-focusable skip link targeting `<main id="main-content">`. Use server-side URL checks to set `aria-current="page"` and apply visual active styles dynamically on navigation items.

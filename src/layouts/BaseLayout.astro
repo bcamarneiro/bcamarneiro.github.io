@@ -11,6 +11,12 @@ const { title, description = "Bruno Camarneiro - Frontend Team Lead with 10+ yea
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://camarneiro.com');
 const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Team Lead & Software Engineer' : `${title} | Bruno Camarneiro`;
+
+const currentPath = Astro.url.pathname;
+const isActive = (path: string) => {
+  if (path === '/') return currentPath === '/';
+  return currentPath.startsWith(path);
+};
 ---
 
 <!doctype html>
@@ -52,21 +58,40 @@ const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Team Lead & So
     <title>{fullTitle}</title>
   </head>
   <body class="min-h-screen flex flex-col">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:p-4 focus:bg-beige focus:text-ink focus:z-[100] focus:outline-none focus:ring-2 focus:ring-copper rounded-md font-medium transition-all">
+      Skip to main content
+    </a>
     <header class="sticky top-0 z-50 bg-beige/95 backdrop-blur-sm border-b border-ink/10">
       <nav class="container-wide py-6 flex items-center justify-between">
         <a href="/" class="text-ink hover:text-ink no-underline group">
           <span class="font-serif text-lg font-semibold tracking-tight">Bruno Camarneiro</span>
         </a>
         <ul class="flex items-center gap-8 text-base">
-          <li><a href="/" class="text-graphite hover:text-ink font-medium no-underline">Home</a></li>
-          <li><a href="/cv" class="text-graphite hover:text-ink font-medium no-underline">CV</a></li>
-          {features.portfolio && <li><a href="/portfolio" class="text-graphite hover:text-ink font-medium no-underline">Portfolio</a></li>}
-          {features.blog && <li><a href="/blog" class="text-graphite hover:text-ink font-medium no-underline">Blog</a></li>}
+          <li>
+            <a href="/" class={`hover:text-ink font-medium no-underline ${isActive('/') ? 'text-ink' : 'text-graphite'}`} aria-current={isActive('/') ? 'page' : undefined}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/cv" class={`hover:text-ink font-medium no-underline ${isActive('/cv') ? 'text-ink' : 'text-graphite'}`} aria-current={isActive('/cv') ? 'page' : undefined}>
+              CV
+            </a>
+          </li>
+          {features.portfolio && <li>
+            <a href="/portfolio" class={`hover:text-ink font-medium no-underline ${isActive('/portfolio') ? 'text-ink' : 'text-graphite'}`} aria-current={isActive('/portfolio') ? 'page' : undefined}>
+              Portfolio
+            </a>
+          </li>}
+          {features.blog && <li>
+            <a href="/blog" class={`hover:text-ink font-medium no-underline ${isActive('/blog') ? 'text-ink' : 'text-graphite'}`} aria-current={isActive('/blog') ? 'page' : undefined}>
+              Blog
+            </a>
+          </li>}
         </ul>
       </nav>
     </header>
 
-    <main class="flex-1">
+    <main id="main-content" class="flex-1">
       <slot />
     </main>
 
