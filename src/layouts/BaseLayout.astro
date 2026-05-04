@@ -68,7 +68,6 @@ const navAriaCurrent = (path: string) => isActive(path) ? 'page' : undefined;
         <ul class="flex items-center gap-8 text-base">
           <li><a href="/" class={navLinkClass('/')} aria-current={navAriaCurrent('/')}>Home</a></li>
           <li><a href="/cv" class={navLinkClass('/cv')} aria-current={navAriaCurrent('/cv')}>CV</a></li>
-          {features.portfolio && <li><a href="/portfolio" class={navLinkClass('/portfolio')} aria-current={navAriaCurrent('/portfolio')}>Portfolio</a></li>}
           {features.blog && <li><a href="/blog" class={navLinkClass('/blog')} aria-current={navAriaCurrent('/blog')}>Blog</a></li>}
         </ul>
       </nav>

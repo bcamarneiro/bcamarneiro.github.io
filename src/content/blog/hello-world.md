@@ -24,6 +24,6 @@ I'm Bruno, a software engineer who believes in building things that matter. Here
 - **Project updates** - What I'm building and learning
 - **Thoughts** - Reflections on the craft of software development
 
-Stay tuned for more content. In the meantime, feel free to explore my [portfolio](/portfolio) or check out my [CV](/cv).
+Stay tuned for more content. In the meantime, feel free to check out my [CV](/cv).
 
 *Curious mind, crafted code.*
