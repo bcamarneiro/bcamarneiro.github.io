@@ -26,6 +26,7 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      - run: npm run check
 
       # Install Chrome for Puppeteer PDF generation
       - name: Setup Chrome
