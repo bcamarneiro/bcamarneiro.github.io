@@ -3,7 +3,7 @@ title: "Hello World"
 description: "Welcome to my blog. A place for thoughts, code, and curiosity."
 publishedAt: 2024-01-01
 tags: ["introduction", "personal"]
-draft: false
+draft: true
 canonicalUrl: "https://camarneiro.com/blog/hello-world"
 # Uncomment and fill after cross-posting
 # crosspost:

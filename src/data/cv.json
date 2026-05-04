@@ -1,13 +1,13 @@
 {
   "personal": {
     "name": "Bruno Camarneiro",
-    "title": "Frontend Team Lead",
+    "title": "Frontend Engineering Leader",
     "email": "bruno@camarneiro.com",
-    "location": "Porto Metropolitan Area, Portugal",
+    "location": "Porto, Portugal | Open to Remote Roles",
     "linkedin": "https://linkedin.com/in/brunocamarneiro",
     "github": "https://github.com/bcamarneiro"
   },
-  "summary": "Frontend Team Lead with 10+ years building web applications for international clients across e-commerce, IoT, and Web3. Currently leading a 7-engineer frontend team working with micro-frontend architecture, Lit web components, and TypeScript. Track record of delivering high-performance applications (improved Lighthouse scores from 30 to 90+), building testing practices from scratch, and mentoring developers across distributed teams in US, EU, and LATAM time zones. Strong expertise in React, Next.js, and TypeScript with growing focus on AI-integrated applications.",
+  "summary": "Frontend Engineering Leader with 10+ years of experience (6 working remotely) building and scaling web applications across e-commerce, IoT, Web3, AI, and sustainability platforms, including enterprise, high-traffic consumer applications for international clients. Delivered 4+ micro-frontend modules, improved Lighthouse scores from 30 to 90+, and reduced LCP by 74% (9.5s to 2.5s) on production systems supporting revenue-generating products. Mentored engineers and led senior-level technical communication across cross-functional teams, while establishing testing frameworks achieving 80% unit coverage and modernizing legacy architectures to reduce defects and complexity across distributed teams in the US, EU, and LATAM.",
   "experience": [
     {
       "id": "exp-1",
@@ -16,13 +16,14 @@
       "location": "Porto, Portugal",
       "startDate": "2025-06",
       "endDate": null,
-      "description": "Managing technical architecture, sprint planning, and performance reviews for frontend team on enterprise consulting project.",
+      "description": "Lead frontend architecture and engineering practices for an enterprise micro-frontend platform.",
       "achievements": [
-        "Set up code review standards and defined technical decision-making process for the team",
-        "Configured Jest and Playwright testing with CI/CD pipelines in GitLab",
-        "Mentoring engineers on TypeScript patterns, web components, and system design"
+        "Own frontend architecture for 4–5 micro-frontend modules, aligning technical decisions with lead architects to ensure scalable, consistent patterns across legacy and newly built applications.",
+        "Mentor engineers on TypeScript patterns, web components, and system design, strengthening technical ownership, code quality, and long-term team capability.",
+        "Redesigned the code-review process using a two-tier model, eliminating days-long feedback cycles and improving PR turnaround time, merge velocity, and cross-team collaboration.",
+        "Established automated testing from zero coverage, achieving 80% unit-test coverage and Playwright E2E pipelines, resulting in zero regressions and higher release confidence."
       ],
-      "skills": ["Lit", "TypeScript", "Micro-frontends", "Team Leadership", "Mentoring"],
+      "skills": ["Lit", "TypeScript", "Micro-frontends", "Playwright", "Jest", "Team Leadership", "Mentoring", "Code Review"],
       "visibility": ["all"]
     },
     {
@@ -32,13 +33,14 @@
       "location": "Remote",
       "startDate": "2024-12",
       "endDate": "2025-05",
-      "description": "Built user interfaces for decentralized hosting platform. Worked async across US, EU, and LATAM time zones. Company had 95% workforce reduction during restructuring.",
+      "description": "Built customer-facing UI for a decentralized hosting and AI agents platform. Worked async across US, EU, and LATAM time zones.",
       "achievements": [
-        "Improved homepage Lighthouse score from 30 to 90+ by optimizing images, converting animations to WebM, adding lazy loading, and splitting bundles per page",
-        "Built AI chat interfaces using LangChain and Eliza frameworks; published npm package (@fleek-platform/agents-chatbox-widget) for embeddable chatbots",
-        "Developed UI component library and state management with Zustand"
+        "Optimized homepage performance, reducing LCP by 74% (9.5s to 2.5s) and achieving Lighthouse 90+, removing technical SEO barriers and improving user-experience metrics critical for organic growth.",
+        "Rebuilt frontend performance architecture by removing GTM bottlenecks, replacing animation libraries, employing lazy loading, and consolidating analytics tooling to support conversion tracking for AI subscriptions.",
+        "Delivered AI chat interfaces using LangChain and Eliza, supporting paying subscribers on a platform generating $30K+ MRR despite incomplete backend dependencies during company restructuring.",
+        "Implemented shared UI components and Zustand-based state management to standardize frontend patterns and accelerate feature development across the application."
       ],
-      "skills": ["React.js", "Next.js", "Zustand", "Tailwind CSS", "TypeScript", "LangChain", "Eliza"],
+      "skills": ["React", "Next.js", "Zustand", "Tailwind CSS", "TypeScript", "LangChain", "Eliza", "Performance Optimization"],
       "visibility": ["all"]
     },
     {
@@ -48,13 +50,14 @@
       "location": "Frankfurt am Main, Germany",
       "startDate": "2023-08",
       "endDate": "2024-11",
-      "description": "Built web applications for carbon certificate cashback platform, both as main product and white-label solution for partners like ADAC (Germany's largest automotive club).",
+      "description": "Built consumer-facing web applications for a carbon-certificate cashback platform, both as main product and as white-label solutions for partners including ADAC and Allianz.",
       "achievements": [
-        "Built vehicle submission and tracking dashboard with Next.js; achieved Lighthouse 90+ and WCAG 2.1 AA accessibility",
-        "Set up testing with Jest and React Testing Library from scratch",
-        "Improved Core Web Vitals and implemented SEO best practices"
+        "Built a Next.js vehicle submission and tracking platform for Germany's THG-Quote program, supporting enterprise partners including ADAC and Allianz in a regulated, consumer-facing production environment.",
+        "Delivered Lighthouse 90+ performance and WCAG 2.1 AA accessibility across document uploads, status tracking, and payment workflows, ensuring high-quality user experiences for regulated automotive use cases.",
+        "Established frontend testing practices from scratch using Jest and React Testing Library, improving code reliability and long-term maintainability across a growing product codebase.",
+        "Strengthened Core Web Vitals and SEO foundations through performance tuning and best-practice implementation to support sustainable discoverability and platform quality."
       ],
-      "skills": ["Next.js", "TypeScript", "Tailwind CSS", "React.js", "Jest", "Testing Library"],
+      "skills": ["Next.js", "TypeScript", "Tailwind CSS", "React", "Jest", "React Testing Library", "WCAG 2.1", "Core Web Vitals"],
       "visibility": ["all"]
     },
     {
@@ -64,13 +67,14 @@
       "location": "Porto, Portugal",
       "startDate": "2021-06",
       "endDate": "2023-07",
-      "description": "Delivered enterprise-grade frontend solutions for major international clients including Vodafone Germany, Ibersol Group, and Dreamlines cruise platform.",
+      "description": "Delivered enterprise frontend solutions for major international clients including Vodafone Germany, Ibersol Group, and Dreamlines (Europe's largest cruise booking platform).",
       "achievements": [
-        "Architected WordPress to React migration for Dreamlines cruise platform (product pages, homepage, cart), improving load times by removing Cloudflare Worker middleware",
-        "Established testing strategy with Jest, Testing Library, and Cypress improving code reliability across team",
-        "Mentored 2-3 junior developers on React patterns and conducted technical interviews for engineering candidates"
+        "Delivered enterprise frontend solutions for international clients including Vodafone Germany, Ibersol Group, and Dreamlines, supporting high-traffic, consumer-facing applications.",
+        "Mentored frontend engineers through hands-on task ownership and production exposure, enabling skill progression and independent feature ownership, and contributing to 20+ technical hiring decisions.",
+        "Led an incremental WordPress-to-React migration for Dreamlines, modernizing landing pages and cruise catalog sections within a three-engineer team while maintaining production stability.",
+        "Established frontend testing foundations using Jest, Testing Library, and Cypress, improving code reliability and long-term maintainability across shared client codebases."
       ],
-      "skills": ["React.js", "styled-components", "Redux.js", "Testing Library", "Scrum", "Git", "REST APIs", "Jest", "Cypress", "TypeScript", "JavaScript"],
+      "skills": ["React", "styled-components", "Redux", "Testing Library", "Jest", "Cypress", "TypeScript", "JavaScript", "REST APIs", "Mentoring", "Hiring"],
       "visibility": ["all"]
     },
     {
@@ -80,13 +84,15 @@
       "location": "Porto, Portugal",
       "startDate": "2019-06",
       "endDate": "2021-06",
-      "description": "Contributed to frontend development for Anova's IoT petrochemical monitoring platform and YOOX Net-a-Porter's luxury e-commerce site (The Outnet).",
+      "description": "Architected frontend solutions for Anova's IoT petrochemical monitoring platform and YOOX Net-a-Porter's luxury e-commerce site (The Outnet).",
       "achievements": [
-        "Implemented micro-frontend modules for Anova's IoT platform and real-time dashboard monitoring petrochemical sensors",
-        "Shipped features for The Outnet e-commerce platform integrating CoreMedia CMS",
-        "Reduced frontend bundle size for The Outnet content pages (homepage, blog, articles) through strategic code-splitting and lazy loading"
+        "Architected frontend solutions for Anova's IoT petrochemical monitoring platform and YOOX Net-a-Porter's luxury e-commerce site, contributing to production systems across industrial and consumer environments.",
+        "Mentored and monitored frontend engineers to meet client expectations, proactively addressing performance issues and maintaining quality standards while operating as an informal team lead without a formal title.",
+        "Implemented 4 micro-frontend modules for Anova's real-time monitoring dashboards, enabling modular delivery and independent deployment across a complex IoT platform.",
+        "Shipped new features for The Outnet by integrating CoreMedia CMS into React-based applications, enabling content teams to manage homepage and editorial updates.",
+        "Optimized frontend bundle size for content-heavy pages using code-splitting and lazy loading to improve load performance and maintainability without disrupting production traffic."
       ],
-      "skills": ["React.js", "Redux.js", "Webpack", "Git", "REST APIs", "E2E", "Unit Testing", "Jenkins", "TypeScript", "JavaScript"],
+      "skills": ["React", "Redux", "Webpack", "Micro-frontends", "REST APIs", "E2E", "Unit Testing", "Jenkins", "TypeScript", "JavaScript", "CoreMedia"],
       "visibility": ["all"]
     },
     {
@@ -96,38 +102,39 @@
       "location": "Porto, Portugal",
       "startDate": "2017-10",
       "endDate": "2019-06",
-      "description": "Built POC for Plinth (real estate crowdfunding startup), migrating from Angular 4 to React. Worked on AngularJS to React migration for Statful monitoring platform.",
+      "description": "Worked on POC and production frontend systems including a real-estate crowdfunding startup and the Statful enterprise monitoring platform.",
       "achievements": [
-        "Successfully migrated applications from Angular/AngularJS to React",
-        "Applied testing strategies with Selenium, Cypress, and Jest"
+        "Constructed proof-of-concept applications for a real-estate crowdfunding startup and contributed to production frontend systems for a monitoring platform used by enterprise clients.",
+        "Migrated applications from AngularJS and Angular 4 to React, reducing architectural complexity, eliminating legacy anti-patterns, and decreasing unexpected production bugs.",
+        "Applied automated testing strategies using Selenium, Cypress, and Jest to improve regression coverage and long-term frontend stability across evolving codebases."
       ],
-      "skills": ["React.js", "Agile Methodologies", "HTML5", "Git", "REST APIs", "Jest", "Front-End Development", "Jenkins"],
+      "skills": ["React", "Angular", "AngularJS", "Selenium", "Cypress", "Jest", "HTML5", "Git", "REST APIs", "Jenkins"],
       "visibility": ["all"]
     },
     {
       "id": "exp-7",
       "title": "IT Consultant",
       "company": "Devoteam",
-      "location": "Porto",
+      "location": "Porto, Portugal",
       "startDate": "2015-07",
       "endDate": "2017-10",
       "description": "Built browser-based TV application for Vodafone Portugal, replicating the set-top box experience in the web browser using AngularJS.",
       "achievements": [
-        "Developed browser-based TV application mirroring set-top box UX for Vodafone Portugal"
+        "Developed browser-based TV application mirroring set-top box UX for Vodafone Portugal."
       ],
-      "skills": ["Agile Methodologies", "Git", "Jest", "Front-End Development", "AngularJS", "JavaScript", "HTML5", "SASS"],
+      "skills": ["AngularJS", "JavaScript", "HTML5", "SASS", "Git", "Jest"],
       "visibility": ["all"]
     },
     {
       "id": "exp-8",
       "title": "Software Developer",
       "company": "RedeRia Innovation",
-      "location": "Vagos",
+      "location": "Vagos, Portugal",
       "startDate": "2013-09",
       "endDate": "2015-06",
       "description": "Worked on websites, dashboards, and Android applications.",
       "achievements": [
-        "Developed Android applications alongside web projects"
+        "Developed Android applications alongside web projects."
       ],
       "skills": ["GitHub", "SASS", "HTML5", "Software Development", "Android Development"],
       "visibility": ["hidden"]
@@ -136,14 +143,14 @@
       "id": "exp-9",
       "title": "Web Developer",
       "company": "iNovmapping, LDA",
-      "location": "Coimbra",
+      "location": "Coimbra, Portugal",
       "startDate": "2013-02",
       "endDate": "2013-06",
       "description": "Internship developing an eCommerce website using WordPress.",
       "achievements": [
-        "Developed eCommerce website with WordPress and SEO optimization"
+        "Developed eCommerce website with WordPress and SEO optimization."
       ],
-      "skills": ["Web Development", "HTML", "WordPress", "SASS", "Git", "Front-End Development", "SEO", "PHP"],
+      "skills": ["WordPress", "PHP", "HTML", "SASS", "Git", "SEO"],
       "visibility": ["hidden"]
     }
   ],
@@ -174,26 +181,25 @@
         "skills": ["AWS (IAM, S3, SES)", "Datadog", "PostHog", "Google Analytics"]
       },
       {
-        "category": "Leadership & Collaboration",
-        "skills": ["Team Leadership", "Technical Mentoring", "Code Review", "Agile/Scrum", "Async/Remote Work", "Stakeholder Management"]
+        "category": "AI & Emerging Tech",
+        "skills": ["LangChain", "LangGraph", "LLM Workflows", "AI Interface Development", "Web3", "Decentralized Apps"]
       },
       {
-        "category": "Emerging Tech",
-        "skills": ["LangChain", "AI Integration", "Web3", "Decentralized Apps"]
+        "category": "Leadership & Collaboration",
+        "skills": ["Team Leadership", "Technical Mentoring", "Code Review", "Agile/Scrum", "Async/Remote Work", "Stakeholder Management", "Recruitment & Hiring"]
       }
     ],
     "soft": [
       "Cross-functional Collaboration",
       "Technical Communication",
       "Problem Solving",
-      "Strategic Planning",
-      "Recruitment & Hiring"
+      "Strategic Planning"
     ]
   },
   "education": [
     {
       "id": "edu-1",
-      "degree": "Master's degree, Artificial Intelligence Engineering (Evening program)",
+      "degree": "Master's degree, Artificial Intelligence Engineering (Evening Program)",
       "institution": "Instituto Politécnico do Porto",
       "location": "Porto, Portugal",
       "startDate": "2025",
@@ -213,43 +219,57 @@
   "projects": [
     {
       "id": "proj-0",
-      "name": "Fleek Agents Chatbox Widget",
-      "description": "Embeddable chat widget for AI-powered chatbots built on the Eliza framework. Published as npm package for customer chatbot deployment.",
-      "url": "https://www.npmjs.com/package/@fleek-platform/agents-chatbox-widget",
-      "technologies": ["React", "TypeScript", "Eliza"],
+      "name": "Debaixo d'olho",
+      "description": "Open-source civic-tech platform analyzing data for all 230 Portuguese MPs, tracking attendance, legislative activity, district comparisons, and visualized taxpayer costs to improve government transparency.",
+      "url": "https://adamastor-prod.vercel.app",
+      "github": "https://github.com/bcamarneiro/adamastor",
+      "technologies": ["Next.js", "TypeScript", "Claude Code", "Web Scraping"],
       "highlights": [
-        "Published npm package for embedding AI chatbots",
-        "Built for Fleek's AI agents platform"
+        "Full-stack web application analyzing public parliamentary data for 230 MPs",
+        "Built entirely on AI-assisted development (Claude Code), automating data scraping and processing",
+        "Live, open-source platform built on public parliamentary data"
       ],
-      "visibility": ["hidden"]
+      "visibility": ["all"]
     },
     {
       "id": "proj-1",
       "name": "Job Sentinel",
-      "description": "LLM-powered job search automation tool built as a meta-experiment: using AI-assisted development to build an AI-powered application. Features multi-agent LangGraph workflow for job scraping, parsing, and matching.",
+      "description": "Multi-agent LLM workflow using LangGraph to automate job scraping, parsing, and matching across Greenhouse, Lever, Workable, and BambooHR. A meta-experiment in Claude-assisted full-stack development.",
       "github": "https://github.com/bcamarneiro/job-sentinel",
       "technologies": ["Python", "LangGraph", "Ollama", "Streamlit", "SQLAlchemy", "Playwright"],
       "highlights": [
         "Multi-agent LLM workflow with parser, matcher, coordinator, and discovery agents",
-        "Clean Architecture with 14.7K LOC across domain, application, and infrastructure layers",
-        "Support for 4+ job board platforms (Greenhouse, Lever, Workable, BambooHR)",
-        "88+ tests with comprehensive unit and integration coverage"
+        "Clean, layered Python application with 14.7K LOC, 88+ tests across domain, application, and infrastructure layers",
+        "Support for 4+ job-board platforms (Greenhouse, Lever, Workable, BambooHR)",
+        "Probe of the reliability, scalability, and limits of Claude-generated code in a production-style system"
       ],
-      "visibility": ["hidden"]
+      "visibility": ["all"]
     },
     {
       "id": "proj-2",
       "name": "Jira Timesheet Report",
-      "description": "Browser-based time tracking dashboard that integrates with Jira to display, filter, and export team worklogs in a calendar view. Runs entirely in the browser with no backend required.",
+      "description": "Browser-based Jira timesheet dashboard with calendar visualization, filtering, and CSV export for individual and team reporting. Runs entirely in the browser with no backend required.",
       "github": "https://github.com/bcamarneiro/jira-timesheet-report",
       "technologies": ["React", "TypeScript", "Zustand", "Rspack", "Vitest", "Playwright", "MSW"],
       "highlights": [
         "Calendar view with monthly worklog visualization and team overview",
         "CSV export for individual or bulk timesheet reports",
-        "Offline development mode using MSW for API mocking",
+        "Offline development mode using MSW for reliable local development without backend dependencies",
         "Retroactive worklog detection for past-dated entries"
       ],
-      "visibility": ["hidden"]
+      "visibility": ["all"]
+    },
+    {
+      "id": "proj-3",
+      "name": "Fleek Agents Chatbox Widget",
+      "description": "Embeddable React/TypeScript chat widget for AI agents on the Eliza framework, enabling customer-facing chatbot deployment across external websites.",
+      "url": "https://www.npmjs.com/package/@fleek-platform/agents-chatbox-widget",
+      "technologies": ["React", "TypeScript", "Eliza"],
+      "highlights": [
+        "Published as npm package for integration into Fleek's AI agents platform and partner applications",
+        "Embeddable across external websites with customer-facing chatbot deployment"
+      ],
+      "visibility": ["all"]
     }
   ],
   "certifications": [],

@@ -1,5 +1,5 @@
 ---
-import { features } from '../config';
+import { getCollection } from 'astro:content';
 
 interface Props {
   title: string;
@@ -7,10 +7,15 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description = "Bruno Camarneiro - Frontend Team Lead with 10+ years building production web applications. Expert in React, Next.js, TypeScript. Remote work specialist across US, EU, and LATAM time zones.", ogImage = "/og-image.png" } = Astro.props;
+// Auto-detect: only show Blog in nav if there's at least one published, non-draft, non-future post.
+const now = new Date();
+const publishedPosts = await getCollection('blog', ({ data }) => !data.draft && new Date(data.publishedAt) <= now);
+const showBlog = publishedPosts.length > 0;
+
+const { title, description = "Bruno Camarneiro - Frontend Engineering Leader with 10+ years building production web applications. Expert in React, Next.js, TypeScript. Remote work specialist across US, EU, and LATAM time zones.", ogImage = "/og-image.png" } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://camarneiro.com');
-const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Team Lead & Software Engineer' : `${title} | Bruno Camarneiro`;
+const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Engineering Leader' : `${title} | Bruno Camarneiro`;
 
 const currentPath = Astro.url.pathname;
 const isActive = (path: string) => path === '/' ? currentPath === '/' : currentPath.startsWith(path);
@@ -68,7 +73,7 @@ const navAriaCurrent = (path: string) => isActive(path) ? 'page' : undefined;
         <ul class="flex items-center gap-8 text-base">
           <li><a href="/" class={navLinkClass('/')} aria-current={navAriaCurrent('/')}>Home</a></li>
           <li><a href="/cv" class={navLinkClass('/cv')} aria-current={navAriaCurrent('/cv')}>CV</a></li>
-          {features.blog && <li><a href="/blog" class={navLinkClass('/blog')} aria-current={navAriaCurrent('/blog')}>Blog</a></li>}
+          {showBlog && <li><a href="/blog" class={navLinkClass('/blog')} aria-current={navAriaCurrent('/blog')}>Blog</a></li>}
         </ul>
       </nav>
     </header>
@@ -84,7 +89,7 @@ const navAriaCurrent = (path: string) => isActive(path) ? 'page' : undefined;
             <img src="/logo.png" alt="BC Logo" class="w-12 h-12 object-contain" />
             <div>
               <p class="font-serif font-semibold">Bruno Camarneiro</p>
-              <p class="text-sm text-graphite">Frontend Team Lead & Software Engineer</p>
+              <p class="text-sm text-graphite">Frontend Engineering Leader</p>
             </div>
           </div>
           <div class="text-sm text-graphite">
