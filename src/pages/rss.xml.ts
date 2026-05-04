@@ -3,7 +3,8 @@ import { getCollection } from 'astro:content';
 import type { APIContext } from 'astro';
 
 export async function GET(context: APIContext) {
-  const blog = await getCollection('blog');
+  const now = new Date();
+  const blog = await getCollection('blog', ({ data }) => !data.draft && new Date(data.publishedAt) <= now);
 
   return rss({
     title: 'Bruno Camarneiro | Blog',

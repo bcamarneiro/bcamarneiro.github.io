@@ -1,10 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { features } from '../config';
+import { getCollection } from 'astro:content';
 import cvData from '../data/cv.json';
 import type { CVData } from '../types/cv';
 
 const cv = cvData as CVData;
+
+// Auto-detect: only show the Writing section if there's at least one published, non-draft, non-future post.
+const now = new Date();
+const publishedPosts = await getCollection('blog', ({ data }) => !data.draft && new Date(data.publishedAt) <= now);
+const hasPosts = publishedPosts.length > 0;
 
 // Calculate years of experience dynamically
 const firstJobYear = 2013; // From cv.json first experience
@@ -49,7 +54,7 @@ const structuredData = {
 };
 ---
 
-<BaseLayout title="Home" description="Bruno Camarneiro — Frontend Engineering Leader with 10+ years building scalable web applications for international clients. Expert in React, Next.js, TypeScript, and distributed team leadership. Open to remote roles across US, EU, and LATAM time zones.">
+<BaseLayout title="Home" description="Bruno Camarneiro - Frontend Engineering Leader with 10+ years building scalable web applications for international clients. Expert in React, Next.js, TypeScript, and distributed team leadership. Open to remote roles across US, EU, and LATAM time zones.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} is:inline />
   <!-- Hero Section -->
   <section class="min-h-screen flex items-center relative overflow-hidden">
@@ -140,7 +145,7 @@ const structuredData = {
             <div class="space-y-4">
               <h3 class="text-2xl md:text-3xl font-light">Technical Leadership</h3>
               <p class="text-xl text-graphite/80 leading-relaxed font-light max-w-2xl">
-                Leading teams through hands-on mentoring and pair programming. Flexible approach adapting to project needs—from full-time management to hands-on development. Experienced coordinating distributed teams across international time zones.
+                Leading teams through hands-on mentoring and pair programming. Flexible approach adapting to project needs, from full-time management to hands-on development. Experienced coordinating distributed teams across international time zones.
               </p>
             </div>
           </div>
@@ -150,7 +155,7 @@ const structuredData = {
             <div class="space-y-4">
               <h3 class="text-2xl md:text-3xl font-light">Performance Engineering</h3>
               <p class="text-xl text-graphite/80 leading-relaxed font-light max-w-2xl">
-                Delivering measurable performance improvements—from Lighthouse scores in the 30s to 90s. Removing complexity that blocks teams. Focus on real-world impact: faster load times, better Core Web Vitals, and empowering developers to ship confidently.
+                Delivering measurable performance improvements, from Lighthouse scores in the 30s to 90s. Removing complexity that blocks teams. Focus on real-world impact: faster load times, better Core Web Vitals, and empowering developers to ship confidently.
               </p>
             </div>
           </div>
@@ -169,7 +174,7 @@ const structuredData = {
     </div>
   </section>
 
-  {features.blog && (
+  {hasPosts && (
     <section class="py-32 md:py-48 border-t border-ink/10">
       <div class="container-wide">
         <div class="max-w-5xl mx-auto">

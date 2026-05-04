@@ -3,11 +3,11 @@
     "name": "Bruno Camarneiro",
     "title": "Frontend Engineering Leader",
     "email": "bruno@camarneiro.com",
-    "location": "Porto, Portugal — Open to Remote Roles",
+    "location": "Porto, Portugal | Open to Remote Roles",
     "linkedin": "https://linkedin.com/in/brunocamarneiro",
     "github": "https://github.com/bcamarneiro"
   },
-  "summary": "Frontend Engineering Leader with 10+ years of experience (6 working remotely) building and scaling web applications across e-commerce, IoT, Web3, AI, and sustainability platforms — including enterprise, high-traffic consumer applications for international clients. Delivered 4+ micro-frontend modules, improved Lighthouse scores from 30 to 90+, and reduced LCP by 74% (9.5s to 2.5s) on production systems supporting revenue-generating products. Mentored engineers and led senior-level technical communication across cross-functional teams, while establishing testing frameworks achieving 80% unit coverage and modernizing legacy architectures to reduce defects and complexity across distributed teams in the US, EU, and LATAM.",
+  "summary": "Frontend Engineering Leader with 10+ years of experience (6 working remotely) building and scaling web applications across e-commerce, IoT, Web3, AI, and sustainability platforms, including enterprise, high-traffic consumer applications for international clients. Delivered 4+ micro-frontend modules, improved Lighthouse scores from 30 to 90+, and reduced LCP by 74% (9.5s to 2.5s) on production systems supporting revenue-generating products. Mentored engineers and led senior-level technical communication across cross-functional teams, while establishing testing frameworks achieving 80% unit coverage and modernizing legacy architectures to reduce defects and complexity across distributed teams in the US, EU, and LATAM.",
   "experience": [
     {
       "id": "exp-1",
@@ -50,7 +50,7 @@
       "location": "Frankfurt am Main, Germany",
       "startDate": "2023-08",
       "endDate": "2024-11",
-      "description": "Built consumer-facing web applications for a carbon-certificate cashback platform — main product and white-label solutions for partners including ADAC and Allianz.",
+      "description": "Built consumer-facing web applications for a carbon-certificate cashback platform, both as main product and as white-label solutions for partners including ADAC and Allianz.",
       "achievements": [
         "Built a Next.js vehicle submission and tracking platform for Germany's THG-Quote program, supporting enterprise partners including ADAC and Allianz in a regulated, consumer-facing production environment.",
         "Delivered Lighthouse 90+ performance and WCAG 2.1 AA accessibility across document uploads, status tracking, and payment workflows, ensuring high-quality user experiences for regulated automotive use cases.",
@@ -220,13 +220,13 @@
     {
       "id": "proj-0",
       "name": "Debaixo d'olho",
-      "description": "Open-source civic-tech platform analyzing data for all 230 Portuguese MPs — tracking attendance, legislative activity, district comparisons, and visualized taxpayer costs to improve government transparency.",
+      "description": "Open-source civic-tech platform analyzing data for all 230 Portuguese MPs, tracking attendance, legislative activity, district comparisons, and visualized taxpayer costs to improve government transparency.",
       "url": "https://adamastor-prod.vercel.app",
       "github": "https://github.com/bcamarneiro/adamastor",
       "technologies": ["Next.js", "TypeScript", "Claude Code", "Web Scraping"],
       "highlights": [
         "Full-stack web application analyzing public parliamentary data for 230 MPs",
-        "Built entirely on AI-assisted development (Claude Code) — automating data scraping and processing",
+        "Built entirely on AI-assisted development (Claude Code), automating data scraping and processing",
         "Live, open-source platform built on public parliamentary data"
       ],
       "visibility": ["all"]
@@ -234,12 +234,12 @@
     {
       "id": "proj-1",
       "name": "Job Sentinel",
-      "description": "Multi-agent LLM workflow using LangGraph to automate job scraping, parsing, and matching across Greenhouse, Lever, Workable, and BambooHR — a meta-experiment in Claude-assisted full-stack development.",
+      "description": "Multi-agent LLM workflow using LangGraph to automate job scraping, parsing, and matching across Greenhouse, Lever, Workable, and BambooHR. A meta-experiment in Claude-assisted full-stack development.",
       "github": "https://github.com/bcamarneiro/job-sentinel",
       "technologies": ["Python", "LangGraph", "Ollama", "Streamlit", "SQLAlchemy", "Playwright"],
       "highlights": [
         "Multi-agent LLM workflow with parser, matcher, coordinator, and discovery agents",
-        "Clean, layered Python application — 14.7K LOC, 88+ tests across domain, application, and infrastructure layers",
+        "Clean, layered Python application with 14.7K LOC, 88+ tests across domain, application, and infrastructure layers",
         "Support for 4+ job-board platforms (Greenhouse, Lever, Workable, BambooHR)",
         "Probe of the reliability, scalability, and limits of Claude-generated code in a production-style system"
       ],
