@@ -11,6 +11,11 @@ const { title, description = "Bruno Camarneiro - Frontend Team Lead with 10+ yea
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://camarneiro.com');
 const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Team Lead & Software Engineer' : `${title} | Bruno Camarneiro`;
+
+const currentPath = Astro.url.pathname;
+const isActive = (path: string) => path === '/' ? currentPath === '/' : currentPath.startsWith(path);
+const navLinkClass = (path: string) => `font-medium no-underline ${isActive(path) ? 'text-ink' : 'text-graphite hover:text-ink'}`;
+const navAriaCurrent = (path: string) => isActive(path) ? 'page' : undefined;
 ---
 
 <!doctype html>
@@ -61,10 +66,10 @@ const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Team Lead & So
           <span class="font-serif text-lg font-semibold tracking-tight">Bruno Camarneiro</span>
         </a>
         <ul class="flex items-center gap-8 text-base">
-          <li><a href="/" class="text-graphite hover:text-ink font-medium no-underline">Home</a></li>
-          <li><a href="/cv" class="text-graphite hover:text-ink font-medium no-underline">CV</a></li>
-          {features.portfolio && <li><a href="/portfolio" class="text-graphite hover:text-ink font-medium no-underline">Portfolio</a></li>}
-          {features.blog && <li><a href="/blog" class="text-graphite hover:text-ink font-medium no-underline">Blog</a></li>}
+          <li><a href="/" class={navLinkClass('/')} aria-current={navAriaCurrent('/')}>Home</a></li>
+          <li><a href="/cv" class={navLinkClass('/cv')} aria-current={navAriaCurrent('/cv')}>CV</a></li>
+          {features.portfolio && <li><a href="/portfolio" class={navLinkClass('/portfolio')} aria-current={navAriaCurrent('/portfolio')}>Portfolio</a></li>}
+          {features.blog && <li><a href="/blog" class={navLinkClass('/blog')} aria-current={navAriaCurrent('/blog')}>Blog</a></li>}
         </ul>
       </nav>
     </header>
