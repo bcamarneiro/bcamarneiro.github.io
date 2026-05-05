@@ -1,3 +1,6 @@
 ## 2024-04-22 - Skip to content links and main nav landmarks
 **Learning:** Found missing skip-to-content functionality and lacking aria-label on primary navigation which are key features for proper screen reader and keyboard accessibility, especially on layouts with large sticky headers.
 **Action:** Always verify keyboard accessibility of layouts specifically ensuring a skip-to-content visually hidden link exists (e.g. `sr-only focus:not-sr-only`) targeting the main wrapper, and ensure `nav` tags have distinctive aria labels to be read out well.
+## 2024-05-05 - Global Focus States and Icon Accessibility
+**Learning:** Found that focus indicators were missing globally across links which hindered keyboard accessibility. Additionally, SVGs used as icons inside links were being read by screen readers.
+**Action:** Applied global `focus-visible` classes to all `a` tags (e.g., `focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-beige`) and `aria-hidden="true"` to decorative `<svg>` icons to improve the experience. Also, ensured that the `skip to content` link uses inverted colors (`focus-visible:ring-beige focus-visible:ring-offset-ink`) to contrast with its active background.
