@@ -42,6 +42,10 @@
     @apply font-serif font-medium tracking-tight;
   }
 
+  a, button {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-copper focus-visible:ring-offset-2 focus-visible:ring-offset-beige rounded-sm;
+  }
+
   a {
     @apply text-copper hover:text-copper/80 transition-colors underline-offset-4;
   }
