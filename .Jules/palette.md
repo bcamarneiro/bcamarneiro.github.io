@@ -1,3 +1,6 @@
 ## 2024-04-22 - Skip to content links and main nav landmarks
 **Learning:** Found missing skip-to-content functionality and lacking aria-label on primary navigation which are key features for proper screen reader and keyboard accessibility, especially on layouts with large sticky headers.
 **Action:** Always verify keyboard accessibility of layouts specifically ensuring a skip-to-content visually hidden link exists (e.g. `sr-only focus:not-sr-only`) targeting the main wrapper, and ensure `nav` tags have distinctive aria labels to be read out well.
+## 2024-05-12 - Focus states and global element grouping
+**Learning:** Found missing explicit focus styles across interactive elements (`a` and `button` tags) globally. Also learned that grouping distinct base elements like `a, button` in CSS when using Tailwind's `@apply` can cause unwanted style sharing (e.g. text color intended for links applied to all buttons).
+**Action:** Always provide explicit, accessible `focus-visible` styles matching the site's design system (e.g., `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-beige`). Ensure distinct elements get isolated style definitions when applying global utilities to prevent cross-contamination.
