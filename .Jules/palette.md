@@ -1,3 +1,7 @@
 ## 2024-04-22 - Skip to content links and main nav landmarks
 **Learning:** Found missing skip-to-content functionality and lacking aria-label on primary navigation which are key features for proper screen reader and keyboard accessibility, especially on layouts with large sticky headers.
 **Action:** Always verify keyboard accessibility of layouts specifically ensuring a skip-to-content visually hidden link exists (e.g. `sr-only focus:not-sr-only`) targeting the main wrapper, and ensure `nav` tags have distinctive aria labels to be read out well.
+
+## 2026-05-18 - Focus-visible styles and decorative SVGs
+**Learning:** Keyboard users were lacking clear visual feedback when tabbing through links due to the absence of `focus-visible` styles on global anchor tags. Additionally, screen readers were reading out decorative SVGs because they lacked `aria-hidden="true"`.
+**Action:** Added a prominent, high-contrast `focus-visible` outline to global links using existing Tailwind utility classes (e.g. `focus-visible:ring-2`, `focus-visible:ring-ink`) to ensure they are clear against the `bg-beige` background without affecting mouse users. Also, ensured that `aria-hidden="true"` is applied to decorative SVGs adjacent to descriptive text to prevent redundant screen reader announcements.
