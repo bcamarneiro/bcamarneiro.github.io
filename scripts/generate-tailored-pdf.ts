@@ -269,7 +269,7 @@ async function generatePDF(inputPath: string, outputPath: string) {
     const page = await browser.newPage();
 
     await page.setContent(html, {
-      waitUntil: 'networkidle0',
+      waitUntil: 'load',
       timeout: 30000,
     });
 
