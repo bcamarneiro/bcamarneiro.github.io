@@ -78,7 +78,7 @@ const navAriaCurrent = (path: string) => isActive(path) ? 'page' : undefined;
       </nav>
     </header>
 
-    <main id="main-content" class="flex-1">
+    <main id="main-content" class="flex-1 focus:outline-none" tabindex="-1">
       <slot />
     </main>
 
