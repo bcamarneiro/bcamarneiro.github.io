@@ -62,7 +62,7 @@ const navAriaCurrent = (path: string) => isActive(path) ? 'page' : undefined;
     <title>{fullTitle}</title>
   </head>
   <body class="min-h-screen flex flex-col">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-[100] focus:p-4 focus:bg-ink focus:text-beige">
+    <a href="#main-content" class="sr-only focus-visible:not-sr-only focus-visible:absolute focus-visible:top-0 focus-visible:left-0 focus-visible:z-[100] focus-visible:p-4 focus-visible:bg-ink focus-visible:text-beige focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-beige">
       Skip to content
     </a>
     <header class="sticky top-0 z-50 bg-beige/95 backdrop-blur-sm border-b border-ink/10">
@@ -78,7 +78,7 @@ const navAriaCurrent = (path: string) => isActive(path) ? 'page' : undefined;
       </nav>
     </header>
 
-    <main id="main-content" class="flex-1">
+    <main id="main-content" class="flex-1 focus:outline-none" tabindex="-1">
       <slot />
     </main>
 
