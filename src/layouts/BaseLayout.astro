@@ -19,7 +19,7 @@ const fullTitle = title === 'Home' ? 'Bruno Camarneiro - Frontend Engineering Le
 
 const currentPath = Astro.url.pathname;
 const isActive = (path: string) => path === '/' ? currentPath === '/' : currentPath.startsWith(path);
-const navLinkClass = (path: string) => `font-medium no-underline ${isActive(path) ? 'text-ink' : 'text-graphite hover:text-ink'}`;
+const navLinkClass = (path: string) => `font-medium no-underline rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-beige ${isActive(path) ? 'text-ink' : 'text-graphite hover:text-ink'}`;
 const navAriaCurrent = (path: string) => isActive(path) ? 'page' : undefined;
 ---
 
@@ -67,7 +67,7 @@ const navAriaCurrent = (path: string) => isActive(path) ? 'page' : undefined;
     </a>
     <header class="sticky top-0 z-50 bg-beige/95 backdrop-blur-sm border-b border-ink/10">
       <nav aria-label="Main navigation" class="container-wide py-6 flex items-center justify-between">
-        <a href="/" class="text-ink hover:text-ink no-underline group">
+        <a href="/" class="text-ink hover:text-ink no-underline group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-beige">
           <span class="font-serif text-lg font-semibold tracking-tight">Bruno Camarneiro</span>
         </a>
         <ul class="flex items-center gap-8 text-base">
@@ -78,7 +78,7 @@ const navAriaCurrent = (path: string) => isActive(path) ? 'page' : undefined;
       </nav>
     </header>
 
-    <main id="main-content" class="flex-1">
+    <main id="main-content" class="flex-1 focus:outline-none" tabindex="-1">
       <slot />
     </main>
 
