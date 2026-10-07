@@ -9,3 +9,7 @@
 ## 2024-10-01 - Focus-visible styles for text links
 **Learning:** Text links stripped of their default underline styling or converted to display as block elements need explicit visual focus states to remain accessible to keyboard users against custom backgrounds.
 **Action:** Ensure custom text links, especially prominent CTAs and navigational links, have appropriate focus-visible utility classes (e.g., `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-beige rounded-sm`) to provide clear visual feedback during keyboard navigation.
+
+## 2024-10-27 - Screen reader warnings for external links
+**Learning:** Links opening in a new tab (`target="_blank"`) without a warning can be disorienting for screen reader users, breaking their mental model of the application's flow and navigation history.
+**Action:** Always include a visually hidden warning for screen readers, such as `<span class="sr-only"> (opens in a new tab)</span>`, inside anchor tags that utilize `target="_blank"`.
